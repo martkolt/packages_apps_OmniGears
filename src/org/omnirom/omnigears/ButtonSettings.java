@@ -59,6 +59,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
     private static final String LONG_PRESS_RECENTS_ACTION = "long_press_recents_action";
     private static final String LONG_PRESS_HOME_ACTION = "long_press_home_action";
     private static final String DOUBLE_PRESS_HOME_ACTION = "double_press_home_action";
+    private static final String BUTTON_BACK_KILL_TIMEOUT = "button_back_kill_timeout";
 
     private ListPreference mNavbarRecentsStyle;
     private ListPreference mLongPressRecentsAction;
@@ -66,6 +67,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
     private ListPreference mDoublePressHomeAction;
     private SwitchPreference mEnableNavBar;
     private SwitchPreference mDisabkeHWKeys;
+    private ListPreference mBackKillTimeout;
 
     @Override
     public int getMetricsCategory() {
@@ -125,6 +127,15 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
         mLongPressHomeAction = (ListPreference) findPreference(LONG_PRESS_HOME_ACTION);
         int longPressHomeAction = Settings.System.getInt(resolver,
                 Settings.System.BUTTON_LONG_PRESS_HOME, defaultLongPressOnHomeBehavior);
+
+        mBackKillTimeout = (ListPreference) findPreference(BUTTON_BACK_KILL_TIMEOUT);
+        final int backKillTimeoutDefault = getResources().getInteger(com.android.internal.R.integer.config_backKillTimeout);
+        final int backKillTimeout = Settings.System.getInt(resolver,
+                Settings.System.BUTTON_BACK_KILL_TIMEOUT, backKillTimeoutDefault);
+
+        mBackKillTimeout.setValue(Integer.toString(backKillTimeout));
+        mBackKillTimeout.setSummary(mBackKillTimeout.getEntry());
+        mBackKillTimeout.setOnPreferenceChangeListener(this);
 
         mLongPressHomeAction.setValue(Integer.toString(longPressHomeAction));
         mLongPressHomeAction.setSummary(mLongPressHomeAction.getEntry());
@@ -193,6 +204,12 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
             int index = mDoublePressHomeAction.findIndexOfValue((String) newValue);
             mDoublePressHomeAction.setSummary(mDoublePressHomeAction.getEntries()[index]);
             Settings.System.putInt(getContentResolver(), Settings.System.BUTTON_DOUBLE_PRESS_HOME, value);
+            return true;
+        } else if (preference == mBackKillTimeout) {
+            int value = Integer.valueOf((String) newValue);
+            int index = mBackKillTimeout.findIndexOfValue((String) newValue);
+            mBackKillTimeout.setSummary(mBackKillTimeout.getEntries()[index]);
+            Settings.System.putInt(getContentResolver(), Settings.System.BUTTON_BACK_KILL_TIMEOUT, value);
             return true;
         }
         return false;

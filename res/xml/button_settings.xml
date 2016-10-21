@@ -87,6 +87,7 @@
             android:entries="@array/navbar_recents_style_entries"
             android:entryValues="@array/navbar_recents_style_values"
             android:persistent="false"/>
+
         <ListPreference
             android:key="long_press_recents_action"
             android:title="@string/long_press_recents_action_title"
@@ -105,6 +106,22 @@
             android:entries="@array/long_press_home_action_entries"
             android:entryValues="@array/long_press_home_action_values"
             android:persistent="false"/>
+
+        <org.omnirom.omnigears.preference.SystemSettingSwitchPreference
+            android:key="button_back_kill_enable"
+            android:title="@string/button_back_kill_enable_title"
+            android:summary="@string/button_back_kill_enable_summary"
+            android:defaultValue="false"/>
+
+        <ListPreference
+            android:key="button_back_kill_timeout"
+            android:title="@string/button_back_kill_timeout_title"
+            android:entries="@array/button_back_kill_timeout_entries"
+            android:entryValues="@array/button_back_kill_timeout_values"
+            android:defaultValue="1500"
+            android:persistent="false"
+            android:dependency="button_back_kill_enable"/>
+
     </PreferenceCategory>
 
 </PreferenceScreen>
