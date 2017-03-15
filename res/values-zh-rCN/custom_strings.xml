@@ -225,6 +225,8 @@
   <string name="custom_header_browse_summary">长按任何图片以用于静态模式</string>
   <string name="style_enabled_summary">自定义标题图片已开启</string>
   <string name="style_disabled_summary">自定义标题图片已关闭</string>
+  <string name="lockscreen_visualizer_title">音乐可视化</string>
+  <string name="lockscreen_visualizer_summary">显示音乐可视化</string>
   <!-- Network traffic -->
   <string name="network_traffic_title">网速指示器</string>
   <string name="show_network_traffic_state">状态栏网速指示器</string>
