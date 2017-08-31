@@ -47,9 +47,11 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
 
     private static final String NAVIGATION_BAR_RECENTS_STYLE = "navbar_recents_style";
     private static final String LONG_PRESS_RECENTS_ACTION = "long_press_recents_action";
+    private static final String LONG_PRESS_HOME_ACTION = "long_press_home_action";
 
     private ListPreference mNavbarRecentsStyle;
     private ListPreference mLongPressRecentsAction;
+    private ListPreference mLongPressHomeAction;
 
     @Override
     public int getMetricsCategory() {
@@ -63,6 +65,8 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
         addPreferencesFromResource(R.xml.button_settings);
 
         final ContentResolver resolver = getContentResolver();
+        final int deviceKeys = getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys);
 
         mNavbarRecentsStyle = (ListPreference) findPreference(NAVIGATION_BAR_RECENTS_STYLE);
         int recentsStyle = Settings.System.getInt(resolver,
@@ -79,6 +83,16 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
         mLongPressRecentsAction.setValue(Integer.toString(longPressRecentsAction));
         mLongPressRecentsAction.setSummary(mLongPressRecentsAction.getEntry());
         mLongPressRecentsAction.setOnPreferenceChangeListener(this);
+
+        // for navbar devices default is always assist LONG_PRESS_HOME_ASSIST = 2
+        int defaultLongPressOnHomeBehavior = (deviceKeys == 0) ? 2 : getResources().getInteger(com.android.internal.R.integer.config_longPressOnHomeBehavior);
+        mLongPressHomeAction = (ListPreference) findPreference(LONG_PRESS_HOME_ACTION);
+        int longPressHomeAction = Settings.System.getInt(resolver,
+                Settings.System.BUTTON_LONG_PRESS_HOME, defaultLongPressOnHomeBehavior);
+
+        mLongPressHomeAction.setValue(Integer.toString(longPressHomeAction));
+        mLongPressHomeAction.setSummary(mLongPressHomeAction.getEntry());
+        mLongPressHomeAction.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -105,6 +119,12 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
             int index = mLongPressRecentsAction.findIndexOfValue((String) newValue);
             mLongPressRecentsAction.setSummary(mLongPressRecentsAction.getEntries()[index]);
             Settings.System.putInt(getContentResolver(), Settings.System.BUTTON_LONG_PRESS_RECENTS, value);
+            return true;
+        } else if (preference == mLongPressHomeAction) {
+            int value = Integer.valueOf((String) newValue);
+            int index = mLongPressHomeAction.findIndexOfValue((String) newValue);
+            mLongPressHomeAction.setSummary(mLongPressHomeAction.getEntries()[index]);
+            Settings.System.putInt(getContentResolver(), Settings.System.BUTTON_LONG_PRESS_HOME, value);
             return true;
         }
         return false;

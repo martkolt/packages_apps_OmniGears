@@ -29,6 +29,18 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="button_power"
+        android:title="@string/global_actions_power_title" >
+        
+        <Preference
+            android:key="global_actions"
+            android:title="@string/global_actions_title"
+            android:summary="@string/global_actions_summary"
+            android:icon="@drawable/ic_settings_power"
+            android:fragment="org.omnirom.omnigears.interfacesettings.GlobalActionsSettings" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="button_other"
         android:title="@string/button_other_title" >
 
@@ -44,11 +56,12 @@
             android:entries="@array/long_press_recents_action_entries"
             android:entryValues="@array/long_press_recents_action_values"
             android:persistent="false"/>
-        <Preference
-            android:key="global_actions"
-            android:title="@string/global_actions_title"
-            android:summary="@string/global_actions_summary"
-            android:icon="@drawable/ic_settings_power"
-            android:fragment="org.omnirom.omnigears.interfacesettings.GlobalActionsSettings" />
+        <ListPreference
+            android:key="long_press_home_action"
+            android:title="@string/long_press_home_action_title"
+            android:entries="@array/long_press_home_action_entries"
+            android:entryValues="@array/long_press_home_action_values"
+            android:persistent="false"/>
     </PreferenceCategory>
+
 </PreferenceScreen>

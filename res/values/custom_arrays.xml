@@ -450,15 +450,17 @@
         <item>@string/long_press_recents_action_split</item>
         <item>@string/keys_action_last_app</item>
         <item>@string/keys_action_sleep</item>
+        <!--<item>@string/keys_action_all_apps</item>-->
     </string-array>
 
     <string-array name="long_press_home_action_values" translatable="false">
         <item>0</item>
-        <item>1</item>
+        <item>7</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
         <item>5</item>
         <item>6</item>
+        <!--<item>1</item>-->
     </string-array>
 </resources>
