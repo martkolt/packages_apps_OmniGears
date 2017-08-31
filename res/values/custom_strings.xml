@@ -358,7 +358,8 @@
     <string name="global_actions_anim">Appearance</string>
     <string name="global_actions_advanced_reboot_summary">Show more options in restart menu</string>
     <string name="global_actions_advanced_reboot_title">Enable advanced restart</string>
-
+    <string name="global_actions_advanced_reboot_summary_new">Show more options in restart menu if not locked</string>
+    
     <string name="font_sample_text">11:57</string>
 
     <string name="screenshot_crop_and_share_title">Screenshot crop &amp; share</string>
