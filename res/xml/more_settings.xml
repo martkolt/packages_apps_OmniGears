@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2017 The OmniROM Project
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="more_settings"
+    android:title="@string/more_settings_title">
+
+        <PreferenceCategory
+            android:key="category_system"
+            android:title="@string/system_category">
+
+            <org.omnirom.omnigears.preference.GlobalSettingSwitchPreference
+                android:key="show_cpu_overlay"
+                android:title="@string/show_cpu_title"
+                android:summary="@string/show_cpu_summary"
+                android:defaultValue="false" />
+
+            <PreferenceScreen
+                android:key="logcat_app"
+                android:title="@string/logcat_app_title"
+                android:summary="@string/logcat_app_summary"
+                android:persistent="false" >
+                <intent android:action="android.intent.action.MAIN"
+                        android:targetPackage="org.omnirom.logcat"
+                        android:targetClass="com.pluscubed.logcat.ui.LogcatActivity" />
+            </PreferenceScreen>
+        </PreferenceCategory>
+</PreferenceScreen>
