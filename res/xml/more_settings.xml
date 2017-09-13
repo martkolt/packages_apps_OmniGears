@@ -23,13 +23,13 @@
             android:key="category_system"
             android:title="@string/system_category">
 
-            <PreferenceScreen
+            <Preference
                 android:key="time_in_state"
                 android:title="@string/time_in_state_title"
                 android:summary="@string/time_in_state_summary"
                 android:fragment="org.omnirom.omnigears.system.TimeInState" />
 
-            <PreferenceScreen
+            <Preference
                 android:key="doze_settings"
                 android:title="@string/doze_settings_title"
                 android:summary="@string/doze_settings_summary"
@@ -41,7 +41,7 @@
                 android:summary="@string/show_cpu_summary"
                 android:defaultValue="false" />
 
-            <PreferenceScreen
+            <Preference
                 android:key="logcat_app"
                 android:title="@string/logcat_app_title"
                 android:summary="@string/logcat_app_summary"
@@ -49,6 +49,6 @@
                 <intent android:action="android.intent.action.MAIN"
                         android:targetPackage="org.omnirom.logcat"
                         android:targetClass="com.pluscubed.logcat.ui.LogcatActivity" />
-            </PreferenceScreen>
+            </Preference>
         </PreferenceCategory>
 </PreferenceScreen>
