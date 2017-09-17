@@ -20,6 +20,18 @@
     android:title="@string/more_settings_title">
 
         <PreferenceCategory
+            android:key="category_other"
+            android:title="@string/other_category">
+
+            <org.omnirom.omnigears.preference.SystemSettingSwitchPreference
+                android:key="volume_dialog_headers"
+                android:title="@string/volume_dialog_headers_title"
+                android:summary="@string/volume_dialog_headers_summary"
+                android:defaultValue="true" />
+
+        </PreferenceCategory>
+
+        <PreferenceCategory
             android:key="category_system"
             android:title="@string/system_category">
 

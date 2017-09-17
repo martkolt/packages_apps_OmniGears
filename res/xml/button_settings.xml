@@ -26,12 +26,19 @@
             android:title="@string/swap_volume_buttons_title"
             android:summary="@string/swap_volume_buttons_summary"
             android:defaultValue="false" />
+
+        <org.omnirom.omnigears.preference.SystemSettingSwitchPreference
+            android:key="volume_button_force_media"
+            android:title="@string/volume_button_force_media_title"
+            android:summary="@string/volume_button_force_media_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
         android:key="button_power"
         android:title="@string/global_actions_power_title" >
-        
+
         <Preference
             android:key="global_actions"
             android:title="@string/global_actions_title"
