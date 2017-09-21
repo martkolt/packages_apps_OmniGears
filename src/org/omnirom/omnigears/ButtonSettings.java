@@ -26,7 +26,10 @@ import android.os.Bundle;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.ListPreference;
+import android.support.v14.preference.SwitchPreference;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 
@@ -42,9 +45,13 @@ import com.android.settings.search.Indexable;
 
 import com.android.internal.util.omni.OmniSwitchConstants;
 import com.android.internal.util.omni.PackageUtils;
+import com.android.internal.util.omni.DeviceUtils;
 
 public class ButtonSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener, Indexable {
 
+    private static final String CATEGORY_KEYS = "button_keys";
+    private static final String KEYS_SHOW_NAVBAR_KEY = "navigation_bar_show";
+    private static final String KEYS_DISABLE_HW_KEY = "hardware_keys_disable";
     private static final String NAVIGATION_BAR_RECENTS_STYLE = "navbar_recents_style";
     private static final String LONG_PRESS_RECENTS_ACTION = "long_press_recents_action";
     private static final String LONG_PRESS_HOME_ACTION = "long_press_home_action";
@@ -52,6 +59,8 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
     private ListPreference mNavbarRecentsStyle;
     private ListPreference mLongPressRecentsAction;
     private ListPreference mLongPressHomeAction;
+    private SwitchPreference mEnableNavBar;
+    private SwitchPreference mDisabkeHWKeys;
 
     @Override
     public int getMetricsCategory() {
@@ -65,8 +74,30 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
         addPreferencesFromResource(R.xml.button_settings);
 
         final ContentResolver resolver = getContentResolver();
+        final PreferenceScreen prefScreen = getPreferenceScreen();
         final int deviceKeys = getResources().getInteger(
                 com.android.internal.R.integer.config_deviceHardwareKeys);
+        final PreferenceCategory keysCategory =
+                (PreferenceCategory) prefScreen.findPreference(CATEGORY_KEYS);
+
+        if (deviceKeys == 0) {
+            prefScreen.removePreference(keysCategory);
+        } else {
+            mEnableNavBar = (SwitchPreference) prefScreen.findPreference(
+                   KEYS_SHOW_NAVBAR_KEY);
+
+            mDisabkeHWKeys = (SwitchPreference) prefScreen.findPreference(
+                    KEYS_DISABLE_HW_KEY);
+
+            boolean showNavBarDefault = DeviceUtils.deviceSupportNavigationBar(getActivity());
+            boolean showNavBar = Settings.System.getInt(resolver,
+                        Settings.System.NAVIGATION_BAR_SHOW, showNavBarDefault ? 1:0) == 1;
+            mEnableNavBar.setChecked(showNavBar);
+
+            boolean harwareKeysDisable = Settings.System.getInt(resolver,
+                        Settings.System.HARDWARE_KEYS_DISABLE, 0) == 1;
+            mDisabkeHWKeys.setChecked(harwareKeysDisable);
+        }
 
         mNavbarRecentsStyle = (ListPreference) findPreference(NAVIGATION_BAR_RECENTS_STYLE);
         int recentsStyle = Settings.System.getInt(resolver,
@@ -97,6 +128,23 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
+        if (preference == mEnableNavBar) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.NAVIGATION_BAR_SHOW, checked ? 1:0);
+            // remove hw button disable if we disable navbar
+            if (!checked) {
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.HARDWARE_KEYS_DISABLE, 0);
+                mDisabkeHWKeys.setChecked(false);
+            }
+            return true;
+        } else if (preference == mDisabkeHWKeys) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.HARDWARE_KEYS_DISABLE, checked ? 1:0);
+            return true;
+        }
         return super.onPreferenceTreeClick(preference);
     }
 
@@ -181,6 +229,13 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
                 @Override
                 public List<String> getNonIndexableKeys(Context context) {
                     ArrayList<String> result = new ArrayList<String>();
+                    final Resources res = context.getResources();
+                    final int deviceKeys = res.getInteger(
+                            com.android.internal.R.integer.config_deviceHardwareKeys);
+
+                    if (deviceKeys == 0) {
+                        result.add(CATEGORY_KEYS);
+                    }
                     return result;
                 }
             };

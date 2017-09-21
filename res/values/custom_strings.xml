@@ -18,8 +18,6 @@
  -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
-    <string name="more_settings_title">OmniGears More...</string>
     <string name="ok">OK</string>
     <string name="advanced">Advanced</string>
     <string name="profiles_add">Add...</string>
@@ -350,13 +348,9 @@
     <string name="global_actions_voiceassist_title">Voiceassist</string>
     <string name="global_actions_silent_title">Silent mode</string>
     <string name="global_actions_dnd_title">Do not disturb</string>
-    <string name="global_actions_title">Power menu</string>
     <string name="global_actions_summary">Actions shown in power menu</string>
     <string name="global_actions_header">Some actions are only visible depending on the setup or only if the device is unlocked</string>
     <string name="global_actions_anim">Appearance</string>
-    <string name="global_actions_advanced_reboot_summary">Show more options in reboot menu</string>
-    <string name="global_actions_advanced_reboot_title">Enable advanced reboot</string>
-
     <string name="font_sample_text">11:57</string>
 
     <string name="screenshot_crop_and_share_title">Screenshot crop &amp; share</string>
@@ -512,7 +506,6 @@
 
     <!-- Display : Rotation -->
     <string name="category_display">Display</string>
-    <string name="display_rotation_title">Rotation</string>
     <string name="display_rotation_disabled">Disabled</string>
     <string name="display_rotation_unit">degrees</string>
     <string name="display_rotation_category_title">Rotation modes</string>
