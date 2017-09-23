@@ -33,6 +33,11 @@
             android:summary="@string/volume_button_force_media_summary"
             android:defaultValue="false" />
 
+        <org.omnirom.omnigears.preference.SystemSettingSwitchPreference
+            android:key="button_volume_wake_screen"
+            android:title="@string/button_volume_wake_title"
+            android:summary="@string/button_volume_wake_summary"
+            android:defaultValue="false" />
     </PreferenceCategory>
 
     <PreferenceCategory
