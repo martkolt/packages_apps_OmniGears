@@ -33,6 +33,12 @@
                 android:summary="@string/status_bar_ime_notification_summary"
                 android:defaultValue="true"/>
 
+            <org.omnirom.omnigears.preference.SystemSettingSwitchPreference
+                android:key="bluetooth_show_battery"
+                android:title="@string/bluetooth_battery_title"
+                android:summary="@string/bluetooth_battery_summary"
+                android:defaultValue="false"/>
+
             <Preference
                 android:key="category_network_traffic"
                 android:title="@string/network_traffic_title"
