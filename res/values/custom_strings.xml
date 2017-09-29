@@ -199,6 +199,7 @@
     <string name="button_link_brightness_summary">Use screen brightness level</string>
     <string name="button_manual_brightness">Brightness level</string>
     <string name="unit_sec">sec</string>
+    <string name="unit_msec">ms</string>
     <string name="button_backlight_enable_title">Enable</string>
 
     <string name="navigation_bar_show_title">Show navigation bar</string>
