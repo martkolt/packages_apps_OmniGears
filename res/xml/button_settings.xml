@@ -34,10 +34,17 @@
             android:defaultValue="false" />
 
         <org.omnirom.omnigears.preference.SystemSettingSwitchPreference
-            android:key="button_volume_wake_screen"
+            android:key="volume_button_wake"
             android:title="@string/button_volume_wake_title"
             android:summary="@string/button_volume_wake_summary"
+            android:disableDependentsState="true"
             android:defaultValue="false" />
+
+        <org.omnirom.omnigears.preference.SystemSettingSwitchPreference
+            android:key="volume_button_music_control"
+            android:title="@string/volume_button_music_control_title"
+            android:summary="@string/volume_button_music_control_summary"
+            android:dependency="volume_button_wake"/>
     </PreferenceCategory>
 
     <PreferenceCategory
