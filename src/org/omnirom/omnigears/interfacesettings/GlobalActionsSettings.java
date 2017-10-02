@@ -33,6 +33,9 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.android.internal.logging.MetricsLogger;
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -44,7 +47,6 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 import org.omnirom.omnigears.preference.SecureSettingSwitchPreference;
-import org.omnirom.omnigears.OmniDashboardFragment;
 
 public class GlobalActionsSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
@@ -56,7 +58,7 @@ public class GlobalActionsSettings extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return OmniDashboardFragment.ACTION_SETTINGS_OMNI;
+        return MetricsEvent.OMNI_SETTINGS;
     }
 
     @Override
