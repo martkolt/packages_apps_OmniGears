@@ -18,7 +18,7 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="more_settings_title">Omni配置 更多...</string>
+  <string name="more_settings_title">更多...</string>
   <string name="ok">确定</string>
   <string name="advanced">高级选项</string>
   <string name="profiles_add">添加...</string>
@@ -137,7 +137,7 @@
   <string name="swap_volume_buttons_summary">根据旋转方向调整音量按键的作用</string>
   <string name="color_picker_dialog_title">颜色</string>
   <!-- Battery light settings  -->
-  <string name="batterylight_title">电池指示灯设置</string>
+  <string name="battery_light_settings_title">电池指示灯设置</string>
   <string name="battery_light_enable">启用</string>
   <string name="battery_low_pulse_title">电量低时闪烁</string>
   <string name="battery_light_only_full_charge_title">仅在充满电时点亮</string>
