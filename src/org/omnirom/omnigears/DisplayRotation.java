@@ -30,6 +30,9 @@ import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 
 import com.android.internal.view.RotationPolicy;
+import com.android.internal.logging.MetricsLogger;
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -70,7 +73,7 @@ public class DisplayRotation extends SettingsPreferenceFragment implements OnPre
 
     @Override
     public int getMetricsCategory() {
-        return OmniDashboardFragment.ACTION_SETTINGS_OMNI;
+        return MetricsEvent.OMNI_SETTINGS;
     }
 
     @Override

@@ -47,7 +47,8 @@ import java.util.List;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import org.omnirom.omnigears.OmniDashboardFragment;
+import com.android.internal.logging.MetricsLogger;
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
 public class DozeSettings extends SettingsPreferenceFragment {
     private static final String TAG = "DozeSettings";
@@ -113,7 +114,7 @@ public class DozeSettings extends SettingsPreferenceFragment {
 
     @Override
     public int getMetricsCategory() {
-        return OmniDashboardFragment.ACTION_SETTINGS_OMNI;
+        return MetricsEvent.OMNI_SETTINGS;
     }
 
     @Override

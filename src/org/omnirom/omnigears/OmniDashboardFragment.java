@@ -34,13 +34,11 @@ import java.util.List;
 public class OmniDashboardFragment extends DashboardFragment {
 
     private static final String TAG = "OmniDashboardFragment";
-    public static final int ACTION_SETTINGS_OMNI = 948;
     public static final String CATEGORY_OMNI = "com.android.settings.category.ia.omni";
 
     @Override
     public int getMetricsCategory() {
-        return ACTION_SETTINGS_OMNI;
-        //return MetricsProto.MetricsEvent.ACTION_SETTINGS_OMNI;
+        return MetricsProto.MetricsEvent.OMNI_SETTINGS;
     }
 
     @Override

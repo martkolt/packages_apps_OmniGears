@@ -32,10 +32,10 @@ import com.android.internal.util.omni.PackageUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
+import com.android.internal.logging.MetricsLogger;
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
-
-import org.omnirom.omnigears.OmniDashboardFragment;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -45,7 +45,7 @@ public class MoreSettings extends SettingsPreferenceFragment implements Indexabl
 
     @Override
     public int getMetricsCategory() {
-        return OmniDashboardFragment.ACTION_SETTINGS_OMNI;
+        return MetricsEvent.OMNI_SETTINGS;
     }
 
     @Override

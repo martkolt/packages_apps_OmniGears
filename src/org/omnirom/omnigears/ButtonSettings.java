@@ -36,6 +36,9 @@ import android.provider.Settings;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.android.internal.logging.MetricsLogger;
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 import com.android.settings.SettingsPreferenceFragment;
@@ -64,7 +67,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
 
     @Override
     public int getMetricsCategory() {
-        return OmniDashboardFragment.ACTION_SETTINGS_OMNI;
+        return MetricsEvent.OMNI_SETTINGS;
     }
 
     @Override

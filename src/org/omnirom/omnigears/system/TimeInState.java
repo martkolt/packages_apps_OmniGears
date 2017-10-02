@@ -35,10 +35,12 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.android.internal.logging.MetricsLogger;
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import org.omnirom.omnigears.OmniDashboardFragment;
 import org.omnirom.omnigears.system.CPUStateMonitor.CpuState;
 import org.omnirom.omnigears.system.CPUStateMonitor.CPUStateMonitorException;
 
@@ -108,7 +110,7 @@ public class TimeInState extends SettingsPreferenceFragment {
 
     @Override
     public int getMetricsCategory() {
-        return OmniDashboardFragment.ACTION_SETTINGS_OMNI;
+        return MetricsEvent.OMNI_SETTINGS;
     }
 
     @Override

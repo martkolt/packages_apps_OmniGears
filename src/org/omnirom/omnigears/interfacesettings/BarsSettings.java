@@ -26,6 +26,9 @@ import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.util.Log;
 
+import com.android.internal.logging.MetricsLogger;
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
 import com.android.settings.dashboard.SummaryLoader;
@@ -35,15 +38,13 @@ import com.android.settings.search.Indexable;
 import java.util.List;
 import java.util.ArrayList;
 
-import org.omnirom.omnigears.OmniDashboardFragment;
-
 public class BarsSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
     private static final String TAG = "BarsSettings";
 
     @Override
     public int getMetricsCategory() {
-        return OmniDashboardFragment.ACTION_SETTINGS_OMNI;
+        return MetricsEvent.OMNI_SETTINGS;
     }
 
     @Override
