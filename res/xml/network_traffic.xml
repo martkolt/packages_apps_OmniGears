@@ -19,32 +19,42 @@
         android:key="category_network_traffic"
         android:title="@string/network_traffic_title">
 
+           <org.omnirom.omnigears.preference.SystemSettingSwitchPreference
+                android:key="network_traffic_enable"
+                android:title="@string/network_traffic_enable_title"
+                android:defaultValue="false"/>
+
             <ListPreference
                 android:key="network_traffic_state"
                 android:title="@string/show_network_traffic_state"
                 android:entries="@array/show_network_traffic_state_entries"
                 android:entryValues="@array/show_network_traffic_state_values"
-                android:persistent="false" />
+                android:persistent="false"
+                android:defaultValue="1"
+                android:dependency="network_traffic_enable" />
 
             <ListPreference
                 android:key="network_traffic_unit"
                 android:title="@string/show_network_traffic_unit"
                 android:entries="@array/show_network_traffic_unit_entries"
                 android:entryValues="@array/show_network_traffic_unit_values"
-                android:persistent="false" />
+                android:persistent="false"
+                android:dependency="network_traffic_enable" />
 
             <ListPreference
                 android:key="network_traffic_period"
                 android:title="@string/show_network_traffic_frequency"
                 android:entries="@array/show_network_traffic_frequency_entries"
                 android:entryValues="@array/show_network_traffic_frequency_values"
-                android:persistent="false" />
+                android:persistent="false"
+                android:dependency="network_traffic_enable" />
 
-            <org.omnirom.omnigears.preference.SystemCheckBoxPreference
+            <org.omnirom.omnigears.preference.SystemSettingSwitchPreference
                 android:key="network_traffic_autohide"
                 android:title="@string/network_traffic_autohide_title"
                 android:summary="@string/network_traffic_autohide_summary"
-                android:defaultValue="false"/>
+                android:defaultValue="false"
+                android:dependency="network_traffic_enable" />
 
             <org.omnirom.omnigears.preference.SeekBarPreference
                 android:key="network_traffic_autohide_threshold"
