@@ -57,6 +57,17 @@
                 android:summary="@string/navigation_bar_ime_button_summary"
                 android:defaultValue="true"/>
 
+        </PreferenceCategory>
+
+        <PreferenceCategory
+            android:key="lockscreen_category"
+            android:title="@string/lockscreen_category_title" >
+
+            <org.omnirom.omnigears.preference.SystemSettingSwitchPreference
+                android:key="lockscreen_hide_media"
+                android:title="@string/lockscreen_hide_media_title"
+                android:summary="@string/lockscreen_hide_media_summary"
+                android:defaultValue="false" />
 
         </PreferenceCategory>
 </PreferenceScreen>

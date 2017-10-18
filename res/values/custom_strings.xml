@@ -247,6 +247,7 @@
     <string name="lockscreen_camera_shortcut_enable_summary">Visibility depends on system setup</string>
     <string name="lockscreen_left_shortcut_enable_title">Show dialer or voice assist shortcut</string>
     <string name="lockscreen_left_shortcut_enable_summary">Visibility depends on system setup</string>
+    <string name="lockscreen_category_title">Lock screen</string>
 
     <string name="notification_title">Notification panel</string>
     <string name="status_bar_custom_header_title">Custom header image</string>
