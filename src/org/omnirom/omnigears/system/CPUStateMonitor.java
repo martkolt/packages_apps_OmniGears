@@ -246,7 +246,7 @@ public class CPUStateMonitor {
                     mFrequencies.add(freq);
                 }
             }
-            Collections.sort(cpuStates, Collections.reverseOrder());
+            Collections.sort(cpuStates);
         } catch (IOException e) {
             throw new CPUStateMonitorException(
                     "Problem processing time-in-states file");
@@ -269,7 +269,7 @@ public class CPUStateMonitor {
                 } else if (freq == firstFreq) {
                     cpu++;
                     if (cpuStates != null) {
-                        Collections.sort(cpuStates, Collections.reverseOrder());
+                        Collections.sort(cpuStates);
                     }
                 }
                 cpuStates = mStates.get(cpu);
