@@ -77,6 +77,8 @@ public class TimeInState extends SettingsPreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext = getActivity();
+        boolean statsInMsecs = getResources().getBoolean(R.bool.config_cpufreq_msecs);
+
         mShowCpus = new ArrayList<Integer>();
         String showCpus = getResources().getString(R.string.config_cpufreq_show_cpus);
         if (!TextUtils.isEmpty(showCpus)) {
@@ -85,7 +87,7 @@ public class TimeInState extends SettingsPreferenceFragment {
                 mShowCpus.add(Integer.valueOf(cpu));
             }
         }
-        monitor = new CPUStateMonitor(mShowCpus);
+        monitor = new CPUStateMonitor(mShowCpus, statsInMsecs);
         mActiveCoreMode = mShowCpus.size() > 1;
 
         mCpuNum = Helpers.getNumOfCpus();
@@ -267,7 +269,7 @@ public class TimeInState extends SettingsPreferenceFragment {
                 mStatesView.setVisibility(View.VISIBLE);
                 long totTime = getStateTime(mActiveStateMode);
                 data.append(totTime + "\n");
-                totTime = totTime / 100;
+                totTime = totTime / 1000;
                 if (!mActiveStateMode) {
                     CpuState deepSleepState = monitor.getDeepSleepState();
                     if (deepSleepState != null) {
@@ -361,7 +363,7 @@ public class TimeInState extends SettingsPreferenceFragment {
                 if (per < 0f) {
                     per = 0f;
                 }
-                tSec = duration / 100;
+                tSec = duration / 1000;
             }
             sPer = String.format("%3d", (int) per) + "%";
             sDur = toString(tSec);
@@ -440,21 +442,24 @@ public class TimeInState extends SettingsPreferenceFragment {
         if (cpus.length != mCpuNum) {
             return;
         }
-        for (int cpu = 0; cpu < mCpuNum; cpu++) {
-            if (mShowCpus != null) {
-                if (!mShowCpus.contains(cpu)) {
-                    continue;
+        try {
+            for (int cpu = 0; cpu < mCpuNum; cpu++) {
+                if (mShowCpus != null) {
+                    if (!mShowCpus.contains(cpu)) {
+                        continue;
+                    }
                 }
+                String cpuData = cpus[cpu];
+                Map<Integer, Long> offsets = new HashMap<Integer, Long>();
+                String[] sOffsets = cpuData.split(",");
+                for (String offset : sOffsets) {
+                    String[] parts = offset.split(";");
+                    offsets.put(Integer.parseInt(parts[0]),
+                            Long.parseLong(parts[1]));
+                }
+                monitor.setOffsets(cpu, offsets);
             }
-            String cpuData = cpus[cpu];
-            Map<Integer, Long> offsets = new HashMap<Integer, Long>();
-            String[] sOffsets = cpuData.split(",");
-            for (String offset : sOffsets) {
-                String[] parts = offset.split(";");
-                offsets.put(Integer.parseInt(parts[0]),
-                        Long.parseLong(parts[1]));
-            }
-            monitor.setOffsets(cpu, offsets);
+        } catch (NumberFormatException e) {
         }
         sHasRefData = true;
     }

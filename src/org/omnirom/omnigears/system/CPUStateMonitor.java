@@ -37,8 +37,10 @@ public class CPUStateMonitor {
     private int mCpuNum;
     private List<Integer> mFrequencies;
     private List<Integer> mShowCpus;
+    private boolean mStatsInMsecs;
 
-    public CPUStateMonitor(List<Integer> showCpus) {
+    public CPUStateMonitor(List<Integer> showCpus, boolean statsInMsecs) {
+        mStatsInMsecs = statsInMsecs;
         mShowCpus = showCpus;
         mCpuNum = Helpers.getNumOfCpus();
         mFrequencies = new ArrayList<Integer>();
@@ -67,10 +69,10 @@ public class CPUStateMonitor {
 
     // @SuppressLint({"UseValueOf", "UseValueOf"})
     public class CpuState implements Comparable<CpuState> {
-        public CpuState(int cpu, int a, long b) {
+        public CpuState(int cpu, int a, long b, boolean msecs) {
             mCpu = cpu;
             freq = a;
-            duration = b;
+            duration = msecs ? b : (b * 10);
         }
 
         public int freq = 0;
@@ -228,8 +230,8 @@ public class CPUStateMonitor {
 
         List<CpuState> cpuStates = mStates.get(0);
         long sleepTime = Math.max((SystemClock.elapsedRealtime() - SystemClock
-                .uptimeMillis()) / 10, 0);
-        cpuStates.add(new CpuState(0, 0, sleepTime));
+                .uptimeMillis()), 0);
+        cpuStates.add(new CpuState(0, 0, sleepTime, true));
         Collections.sort(mFrequencies);
     }
 
@@ -241,7 +243,7 @@ public class CPUStateMonitor {
                 String[] nums = line.split(" ");
                 int freq = Integer.parseInt(nums[0]);
                 cpuStates.add(new CpuState(cpu, freq, Long
-                        .parseLong(nums[1])));
+                        .parseLong(nums[1]), mStatsInMsecs));
                 if (!mFrequencies.contains(freq)) {
                     mFrequencies.add(freq);
                 }
@@ -273,7 +275,7 @@ public class CPUStateMonitor {
                     }
                 }
                 cpuStates = mStates.get(cpu);
-                cpuStates.add(new CpuState(cpu, freq, Long.parseLong(nums[1])));
+                cpuStates.add(new CpuState(cpu, freq, Long.parseLong(nums[1]), mStatsInMsecs));
                 if (!mFrequencies.contains(freq)) {
                     mFrequencies.add(freq);
                 }
