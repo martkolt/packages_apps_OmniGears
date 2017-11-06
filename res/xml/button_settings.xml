@@ -66,18 +66,6 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="button_power"
-        android:title="@string/global_actions_power_title" >
-
-        <Preference
-            android:key="global_actions"
-            android:title="@string/global_actions_title"
-            android:summary="@string/global_actions_summary"
-            android:icon="@drawable/ic_settings_power"
-            android:fragment="org.omnirom.omnigears.interfacesettings.GlobalActionsSettings" />
-    </PreferenceCategory>
-
-    <PreferenceCategory
         android:key="button_other"
         android:title="@string/button_other_title" >
 
