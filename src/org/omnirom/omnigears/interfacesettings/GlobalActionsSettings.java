@@ -51,9 +51,7 @@ import org.omnirom.omnigears.preference.SecureSettingSwitchPreference;
 public class GlobalActionsSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
     private static final String TAG = "GlobalActionsSettings";
-    private static final String POWER_MENU_ANIMATIONS = "power_menu_animations";
 
-    private ListPreference mPowerMenuAnimations;
     private SecureSettingSwitchPreference mAdvancedReboot;
 
     @Override
@@ -69,12 +67,6 @@ public class GlobalActionsSettings extends SettingsPreferenceFragment implements
         final PreferenceScreen prefScreen = getPreferenceScreen();
         final ContentResolver contentResolver = getContext().getContentResolver();
 
-        mPowerMenuAnimations = (ListPreference) findPreference(POWER_MENU_ANIMATIONS);
-        mPowerMenuAnimations.setValue(String.valueOf(Settings.System.getInt(
-                getContentResolver(), Settings.System.POWER_MENU_ANIMATIONS, 0)));
-        mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
-        mPowerMenuAnimations.setOnPreferenceChangeListener(this);
-
         mAdvancedReboot = (SecureSettingSwitchPreference)
                 findPreference(Settings.Secure.ADVANCED_REBOOT);
         mAdvancedReboot.setOnPreferenceChangeListener(this);
@@ -88,15 +80,7 @@ public class GlobalActionsSettings extends SettingsPreferenceFragment implements
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
          boolean result = false;
-         if (preference instanceof ListPreference) {
-             if (preference == mPowerMenuAnimations) {
-                Settings.System.putInt(getContentResolver(), Settings.System.POWER_MENU_ANIMATIONS,
-                        Integer.valueOf((String) objValue));
-                mPowerMenuAnimations.setValue(String.valueOf(objValue));
-                mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
-                return true;
-             }
-         } else if (preference instanceof SecureSettingSwitchPreference) {
+         if (preference instanceof SecureSettingSwitchPreference) {
              if (preference == mAdvancedReboot) {
                 boolean value = (Boolean) objValue;
                 Settings.Secure.putInt(getContentResolver(), Settings.Secure.ADVANCED_REBOOT,

@@ -21,7 +21,6 @@ import android.content.Context;
 import android.database.ContentObserver;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.preference.CheckBoxPreference;
 import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
@@ -53,11 +52,11 @@ public class DisplayRotation extends SettingsPreferenceFragment implements OnPre
     private static final String ROTATION_270_PREF = "display_rotation_270";
 
     private SwitchPreference mAccelerometer;
-    private CheckBoxPreference mLockScreenRotationPref;
-    private CheckBoxPreference mRotation0Pref;
-    private CheckBoxPreference mRotation90Pref;
-    private CheckBoxPreference mRotation180Pref;
-    private CheckBoxPreference mRotation270Pref;
+    private SwitchPreference mLockScreenRotationPref;
+    private SwitchPreference mRotation0Pref;
+    private SwitchPreference mRotation90Pref;
+    private SwitchPreference mRotation180Pref;
+    private SwitchPreference mRotation270Pref;
 
     public static final int ROTATION_0_MODE = 1;
     public static final int ROTATION_90_MODE = 2;
@@ -85,11 +84,11 @@ public class DisplayRotation extends SettingsPreferenceFragment implements OnPre
         PreferenceScreen prefSet = getPreferenceScreen();
 
         mAccelerometer = (SwitchPreference) findPreference(KEY_ACCELEROMETER);
-        mLockScreenRotationPref = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_ROTATION);
-        mRotation0Pref = (CheckBoxPreference) prefSet.findPreference(ROTATION_0_PREF);
-        mRotation90Pref = (CheckBoxPreference) prefSet.findPreference(ROTATION_90_PREF);
-        mRotation180Pref = (CheckBoxPreference) prefSet.findPreference(ROTATION_180_PREF);
-        mRotation270Pref = (CheckBoxPreference) prefSet.findPreference(ROTATION_270_PREF);
+        mLockScreenRotationPref = (SwitchPreference) prefSet.findPreference(LOCKSCREEN_ROTATION);
+        mRotation0Pref = (SwitchPreference) prefSet.findPreference(ROTATION_0_PREF);
+        mRotation90Pref = (SwitchPreference) prefSet.findPreference(ROTATION_90_PREF);
+        mRotation180Pref = (SwitchPreference) prefSet.findPreference(ROTATION_180_PREF);
+        mRotation270Pref = (SwitchPreference) prefSet.findPreference(ROTATION_270_PREF);
 
         int allowAllRotations = getResources().
                 getBoolean(com.android.internal.R.bool.config_allowAllRotations) ? 1 : 0;
