@@ -55,4 +55,15 @@ public class OmniDashboardFragment extends DashboardFragment {
     protected List<AbstractPreferenceController> getPreferenceControllers(Context context) {
         return null;
     }
+
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+
+                public List<SearchIndexableResource> getXmlResourcesToIndex(
+                        Context context, boolean enabled) {
+                    final SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.omni_dashboard_fragment;
+                    return Arrays.asList(sir);
+                }
+            };
 }
