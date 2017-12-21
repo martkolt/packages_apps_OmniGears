@@ -60,7 +60,7 @@ public class SeekBarPreference extends Preference implements OnSeekBarChangeList
 
     private void initPreference(Context context, AttributeSet attrs) {
         setValuesFromXml(attrs);
-        setLayoutResource(R.layout.seek_bar_preference);
+        setLayoutResource(R.layout.preference_seek_bar);
     }
 
     private void setValuesFromXml(AttributeSet attrs) {

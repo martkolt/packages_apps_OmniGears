@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.omnirom.omnigears.batterylight;
+package org.omnirom.omnigears.preference;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -51,10 +51,10 @@ import java.util.ArrayList;
 import java.util.IllegalFormatException;
 import java.util.Locale;
 
-public class BatteryLightDialog extends AlertDialog implements
+public class ColorSelectDialog extends AlertDialog implements
         ColorPickerView.OnColorChangedListener, TextWatcher, OnFocusChangeListener {
 
-    private static final String TAG = "BatteryLightDialog";
+    private static final String TAG = "ColorSelectDialog";
     private final static String STATE_KEY_COLOR = "BatteryLightDialog:color";
 
     private ColorPickerView mColorPicker;
@@ -70,7 +70,7 @@ public class BatteryLightDialog extends AlertDialog implements
     private LedColorAdapter mLedColorAdapter;
     private boolean mWithAlpha;
 
-    protected BatteryLightDialog(Context context, int initialColor) {
+    protected ColorSelectDialog(Context context, int initialColor) {
         super(context);
         mWithAlpha = false;
         mMultiColor = getContext().getResources().getBoolean(R.bool.config_has_multi_color_led);

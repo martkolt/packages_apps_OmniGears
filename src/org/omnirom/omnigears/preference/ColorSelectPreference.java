@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.omnirom.omnigears.batterylight;
+package org.omnirom.omnigears.preference;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -30,9 +30,9 @@ import android.widget.ImageView;
 
 import com.android.settings.R;
 
-public class BatteryLightPreference extends Preference implements DialogInterface.OnDismissListener {
+public class ColorSelectPreference extends Preference implements DialogInterface.OnDismissListener {
 
-    private static String TAG = "BatteryLightPreference";
+    private static String TAG = "ColorSelectPreference";
     public static final int DEFAULT_COLOR = 0xFFFFFF; //White
 
     private ImageView mLightColorView;
@@ -44,20 +44,20 @@ public class BatteryLightPreference extends Preference implements DialogInterfac
      * @param context
      * @param attrs
      */
-    public BatteryLightPreference(Context context, AttributeSet attrs) {
+    public ColorSelectPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         mColorValue = DEFAULT_COLOR;
         init();
     }
 
-    public BatteryLightPreference(Context context, int color) {
+    public ColorSelectPreference(Context context, int color) {
         super(context, null);
         mColorValue = color;
         init();
     }
 
     private void init() {
-        setLayoutResource(R.layout.preference_battery_light);
+        setLayoutResource(R.layout.preference_color_select);
         mResources = getContext().getResources();
     }
 
@@ -98,7 +98,7 @@ public class BatteryLightPreference extends Preference implements DialogInterfac
     }
 
     public Dialog getDialog() {
-        final BatteryLightDialog d = new BatteryLightDialog(getContext(),
+        final ColorSelectDialog d = new ColorSelectDialog(getContext(),
                 0xFF000000 | mColorValue);
 
         d.setButton(AlertDialog.BUTTON_POSITIVE, mResources.getString(R.string.ok),

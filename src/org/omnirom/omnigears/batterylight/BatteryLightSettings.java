@@ -40,6 +40,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 
 import org.omnirom.omnigears.preference.SystemSettingSwitchPreference;
+import org.omnirom.omnigears.preference.ColorSelectPreference;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -67,11 +68,11 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
     private SystemSettingSwitchPreference mOnlyFullPref;
     private SystemSettingSwitchPreference mFastBatteryLightEnabledPref;
     private PreferenceGroup mColorPrefs;
-    private BatteryLightPreference mLowColorPref;
-    private BatteryLightPreference mMediumColorPref;
-    private BatteryLightPreference mFullColorPref;
-    private BatteryLightPreference mReallyFullColorPref;
-    private BatteryLightPreference mFastColorPref;
+    private ColorSelectPreference mLowColorPref;
+    private ColorSelectPreference mMediumColorPref;
+    private ColorSelectPreference mFullColorPref;
+    private ColorSelectPreference mReallyFullColorPref;
+    private ColorSelectPreference mFastColorPref;
     private static final int MENU_RESET = Menu.FIRST;
     private int mLowBatteryWarningLevel;
     private boolean mBatteryLightEnabled;
@@ -112,21 +113,21 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
             setHasOptionsMenu(true);
 
             // Low, Medium and full color preferences
-            mLowColorPref = (BatteryLightPreference) prefSet.findPreference(LOW_COLOR_PREF);
+            mLowColorPref = (ColorSelectPreference) prefSet.findPreference(LOW_COLOR_PREF);
             mLowColorPref.setOnPreferenceChangeListener(this);
 
-            mMediumColorPref = (BatteryLightPreference) prefSet.findPreference(MEDIUM_COLOR_PREF);
+            mMediumColorPref = (ColorSelectPreference) prefSet.findPreference(MEDIUM_COLOR_PREF);
             mMediumColorPref.setOnPreferenceChangeListener(this);
 
-            mFullColorPref = (BatteryLightPreference) prefSet.findPreference(FULL_COLOR_PREF);
+            mFullColorPref = (ColorSelectPreference) prefSet.findPreference(FULL_COLOR_PREF);
             mFullColorPref.setOnPreferenceChangeListener(this);
 
-            mReallyFullColorPref = (BatteryLightPreference) prefSet.findPreference(REALLY_FULL_COLOR_PREF);
+            mReallyFullColorPref = (ColorSelectPreference) prefSet.findPreference(REALLY_FULL_COLOR_PREF);
             mReallyFullColorPref.setOnPreferenceChangeListener(this);
 
             mFastBatteryLightEnabledPref = (SystemSettingSwitchPreference)prefSet.findPreference(FAST_CHARGING_LED_PREF);
 
-            mFastColorPref = (BatteryLightPreference) prefSet.findPreference(FAST_COLOR_PREF);
+            mFastColorPref = (ColorSelectPreference) prefSet.findPreference(FAST_COLOR_PREF);
             mFastColorPref.setOnPreferenceChangeListener(this);
 
             // Does the Device support fast charge ?
@@ -265,7 +266,7 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
             // If enabled, disable all but really full color preference.
             updateEnablement(value);
         } else {
-            BatteryLightPreference lightPref = (BatteryLightPreference) preference;
+            ColorSelectPreference lightPref = (ColorSelectPreference) preference;
             updateValues(lightPref.getKey(), lightPref.getColor());
         }
         return true;
