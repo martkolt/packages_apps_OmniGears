@@ -62,5 +62,12 @@
                         android:targetPackage="org.omnirom.logcat"
                         android:targetClass="com.pluscubed.logcat.ui.LogcatActivity" />
             </Preference>
+
+            <Preference
+                android:key="volume_steps"
+                android:title="@string/volume_steps_title"
+                android:summary="@string/volume_steps_summary"
+                android:fragment="org.omnirom.omnigears.system.VolumeSteps" />
+
         </PreferenceCategory>
 </PreferenceScreen>
