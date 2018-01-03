@@ -58,10 +58,12 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
     private static final String NAVIGATION_BAR_RECENTS_STYLE = "navbar_recents_style";
     private static final String LONG_PRESS_RECENTS_ACTION = "long_press_recents_action";
     private static final String LONG_PRESS_HOME_ACTION = "long_press_home_action";
+    private static final String DOUBLE_PRESS_HOME_ACTION = "double_press_home_action";
 
     private ListPreference mNavbarRecentsStyle;
     private ListPreference mLongPressRecentsAction;
     private ListPreference mLongPressHomeAction;
+    private ListPreference mDoublePressHomeAction;
     private SwitchPreference mEnableNavBar;
     private SwitchPreference mDisabkeHWKeys;
 
@@ -127,6 +129,15 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
         mLongPressHomeAction.setValue(Integer.toString(longPressHomeAction));
         mLongPressHomeAction.setSummary(mLongPressHomeAction.getEntry());
         mLongPressHomeAction.setOnPreferenceChangeListener(this);
+
+        int defaultDoublePressOnHomeBehavior = getResources().getInteger(com.android.internal.R.integer.config_doubleTapOnHomeBehavior);
+        mDoublePressHomeAction = (ListPreference) findPreference(DOUBLE_PRESS_HOME_ACTION);
+        int doublePressHomeAction = Settings.System.getInt(resolver,
+                Settings.System.BUTTON_DOUBLE_PRESS_HOME, defaultDoublePressOnHomeBehavior);
+
+        mDoublePressHomeAction.setValue(Integer.toString(doublePressHomeAction));
+        mDoublePressHomeAction.setSummary(mDoublePressHomeAction.getEntry());
+        mDoublePressHomeAction.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -176,6 +187,12 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
             int index = mLongPressHomeAction.findIndexOfValue((String) newValue);
             mLongPressHomeAction.setSummary(mLongPressHomeAction.getEntries()[index]);
             Settings.System.putInt(getContentResolver(), Settings.System.BUTTON_LONG_PRESS_HOME, value);
+            return true;
+        } else if (preference == mDoublePressHomeAction) {
+            int value = Integer.valueOf((String) newValue);
+            int index = mDoublePressHomeAction.findIndexOfValue((String) newValue);
+            mDoublePressHomeAction.setSummary(mDoublePressHomeAction.getEntries()[index]);
+            Settings.System.putInt(getContentResolver(), Settings.System.BUTTON_DOUBLE_PRESS_HOME, value);
             return true;
         }
         return false;

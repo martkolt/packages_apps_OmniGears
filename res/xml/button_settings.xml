@@ -99,6 +99,12 @@
             android:entries="@array/long_press_home_action_entries"
             android:entryValues="@array/long_press_home_action_values"
             android:persistent="false"/>
+        <ListPreference
+            android:key="double_press_home_action"
+            android:title="@string/double_press_home_action_title"
+            android:entries="@array/long_press_home_action_entries"
+            android:entryValues="@array/long_press_home_action_values"
+            android:persistent="false"/>
     </PreferenceCategory>
 
 </PreferenceScreen>

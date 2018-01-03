@@ -216,6 +216,7 @@
     <string name="long_press_recents_action_title">Long press recents action</string>
     <string name="long_press_recents_action_split">Toggle splitscreen</string>
     <string name="long_press_home_action_title">Long press home action</string>
+    <string name="double_press_home_action_title">Double tap home action</string>
     <string name="keys_action_recents">Recents</string>
     <string name="keys_action_assist">Launch assist</string>
 
