@@ -529,8 +529,6 @@
     <string name="volume_button_force_media_title">Force media volume</string>
     <string name="volume_button_force_media_summary">Media volume will be changed by default</string>
 
-    <string name="lockscreen_hide_status_bar_title">Hide status bar</string>
-    <string name="lockscreen_hide_status_bar_summary">Touch status bar to toggle visibility</string>
     <string name="status_bar_logo_title">Status bar logo</string>
     <string name="status_bar_logo_summary">A little swag</string>
 
@@ -648,4 +646,16 @@
     <string name="expanded_user_configurable">User configurable</string>
     <string name="show_only_launcher_menu">Only launcher apps</string>
     <string name="show_all_apps_menu">All apps</string>
+
+    <!-- Hide lockscreen status bar, clock, date, alarm -->
+    <string name="lockscreen_item_title">Lock screen items</string>
+    <string name="lockscreen_item_summary">Configure visibility of lock screen items</string>
+    <string name="hide_lockscreen_clock_title">Hide clock widget</string>
+    <string name="hide_lockscreen_clock_summary">Change the clock widget\'s visibility</string>
+    <string name="hide_lockscreen_date_title">Hide date widget</string>
+    <string name="hide_lockscreen_date_summary">Change the date\'s visibility underneath the clock widget</string>
+    <string name="hide_lockscreen_alarm_title">Hide alarm text</string>
+    <string name="hide_lockscreen_alarm_summary">Change the alarm text\'s visibility underneath the clock widget</string>
+    <string name="hide_lockscreen_status_bar_title">Hide status bar</string>
+    <string name="hide_lockscreen_status_bar_summary">Touch status bar to toggle visibility</string>
 </resources>
