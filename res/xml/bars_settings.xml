@@ -39,6 +39,11 @@
                 android:summary="@string/network_traffic_summary"
                 android:fragment="org.omnirom.omnigears.interfacesettings.NetworkTraffic" />
 
+            <Preference
+                android:key="carrier_label"
+                android:fragment="org.omnirom.omnigears.interfacesettings.CarrierLabel"
+                android:title="@string/carrier_label_title" />
+
         </PreferenceCategory>
 
         <PreferenceCategory
