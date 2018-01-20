@@ -614,4 +614,10 @@
     <string name="volume_steps_5">5 steps</string>
     <string name="system_volume_option_title">System volume</string>
     <string name="call_volume_option_title">Voice call volume</string>
+
+    <string name="force_ambient_for_media_pref_title">Ambient Music Ticker</string>
+    <string name="force_ambient_for_media_off">Disabled</string>
+    <string name="force_ambient_for_media_on">Enabled</string>
+    <string name="force_ambient_for_media_on_forced">Enabled and forced</string>
+    <string name="force_ambient_for_media_on_forced_clean">Enabled and forced minimal</string>
 </resources>
