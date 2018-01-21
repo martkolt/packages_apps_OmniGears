@@ -63,11 +63,5 @@
                 android:summary="@string/lockscreen_hide_media_summary"
                 android:defaultValue="false" />
 
-            <org.omnirom.omnigears.preference.SecureSettingSwitchPreference
-                android:key="lockscreen_visualizer"
-                android:title="@string/lockscreen_visualizer_title"
-                android:summary="@string/lockscreen_visualizer_summary"
-                android:defaultValue="true" />
-
         </PreferenceCategory>
 </PreferenceScreen>
