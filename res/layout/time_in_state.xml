@@ -28,20 +28,19 @@ Copyright (C) 2012  James Roberts
         android:paddingTop="10dp"
         android:paddingStart="20dp"
         android:paddingEnd="10dp"
-        android:background="?android:attr/colorPrimary" >
+        android:background="?android:attr/colorPrimaryDark" >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="@string/spinner_period_title"
-            android:textColor="@color/system_activity_header_text"
+            android:textColor="?android:attr/textColorPrimary"
             android:textSize="16sp" />
         <Spinner
             android:id="@+id/period_type_select"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:backgroundTint="@color/system_activity_header_text" />
+            android:gravity="center_vertical" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,14 +50,14 @@ Copyright (C) 2012  James Roberts
         android:paddingBottom="10dp"
         android:paddingStart="20dp"
         android:paddingEnd="10dp"
-        android:background="?android:attr/colorPrimary" >
+        android:background="?android:attr/colorPrimaryDark" >
         <TextView
             android:id="@+id/ui_total_state_time"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
-            android:textColor="@color/system_activity_header_text"
+            android:textColor="?android:attr/textColorPrimary"
             android:textSize="16sp" />
         <CheckBox
             android:id="@+id/ui_core_switch"
@@ -66,16 +65,16 @@ Copyright (C) 2012  James Roberts
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="@string/state_core_mode"
-            android:textColor="@color/system_activity_header_text"
-            android:buttonTint="@color/system_activity_header_text"/>
+            android:textColor="?android:attr/textColorPrimary"
+            android:buttonTint="?android:attr/textColorPrimary"/>
         <CheckBox
             android:id="@+id/ui_mode_switch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="@string/state_time_mode"
-            android:textColor="@color/system_activity_header_text"
-            android:buttonTint="@color/system_activity_header_text"/>
+            android:textColor="?android:attr/textColorPrimary"
+            android:buttonTint="?android:attr/textColorPrimary"/>
     </LinearLayout>
 
     <ScrollView

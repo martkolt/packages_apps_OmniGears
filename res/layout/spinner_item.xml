@@ -23,7 +23,7 @@
     android:maxLines="1"
     android:ellipsize="marquee"
     android:gravity="center_vertical"
-    android:textColor="@color/system_activity_header_text"
+    android:textColor="?android:attr/textColorPrimary"
     android:textSize="16sp"
-    android:background="?android:attr/colorPrimary" >
+    android:background="?android:attr/colorPrimaryDark" >
 </TextView>
