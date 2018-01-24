@@ -57,9 +57,6 @@ public class BarsSettings extends SettingsPreferenceFragment implements
     private static final String TAG = "BarsSettings";
     private static final String NETWORK_TRAFFIC_ROOT = "category_network_traffic";
     private static final String NAVIGATIONBAR_ROOT = "category_navigationbar";
-    private static final String KEY_AMBIENT_MEDIA = "force_ambient_for_media";
-
-    private ListPreference mAmbientMedia;
 
     @Override
     public int getMetricsCategory() {
@@ -85,28 +82,63 @@ public class BarsSettings extends SettingsPreferenceFragment implements
             prefScreen.removePreference(findPreference(NETWORK_TRAFFIC_ROOT));
         }
 
-        mAmbientMedia = (ListPreference) findPreference(KEY_AMBIENT_MEDIA);
-        int ambientMediaValue = Settings.System.getInt(getContentResolver(),
-                Settings.System.FORCE_AMBIENT_FOR_MEDIA, 0);
-        int valueIndex = mAmbientMedia.findIndexOfValue(String.valueOf(ambientMediaValue));
-        mAmbientMedia.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
-        mAmbientMedia.setSummary(mAmbientMedia.getEntry());
-        mAmbientMedia.setOnPreferenceChangeListener(this);
+        //final boolean customHeaderImage = Settings.System.getInt(getContentResolver(),
+        //        Settings.System.STATUS_BAR_CUSTOM_HEADER, 0) == 1;
+        //mCustomHeaderImage = (CheckBoxPreference) findPreference(CUSTOM_HEADER_IMAGE);
+        //mCustomHeaderImage.setChecked(customHeaderImage);
+
+        //String settingHeaderPackage = Settings.System.getString(getContentResolver(),
+        //        Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK);
+        //if (settingHeaderPackage == null) {
+        //    settingHeaderPackage = DEFAULT_HEADER_PACKAGE;
+        //}
+        //mDaylightHeaderPack = (ListPreference) findPreference(DAYLIGHT_HEADER_PACK);
+
+        //List<String> entries = new ArrayList<String>();
+        //List<String> values = new ArrayList<String>();
+        //getAvailableHeaderPacks(entries, values);
+        //mDaylightHeaderPack.setEntries(entries.toArray(new String[entries.size()]));
+        //mDaylightHeaderPack.setEntryValues(values.toArray(new String[values.size()]));
+
+        //int valueIndex = mDaylightHeaderPack.findIndexOfValue(settingHeaderPackage);
+        //if (valueIndex == -1) {
+            // no longer found
+        //    settingHeaderPackage = DEFAULT_HEADER_PACKAGE;
+        //    Settings.System.putString(getContentResolver(),
+        //            Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK, settingHeaderPackage);
+        //    valueIndex = mDaylightHeaderPack.findIndexOfValue(settingHeaderPackage);
+        //}
+        //mDaylightHeaderPack.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
+        //mDaylightHeaderPack.setSummary(mDaylightHeaderPack.getEntry());
+        //mDaylightHeaderPack.setOnPreferenceChangeListener(this);
+
+        //mHeaderShadow = (SeekBarPreference) findPreference(CUSTOM_HEADER_IMAGE_SHADOW);
+        //final int headerShadow = Settings.System.getInt(getContentResolver(),
+        //        Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, 0);
+        //mHeaderShadow.setValue((int)(((double) headerShadow / 255) * 100));
+        //mHeaderShadow.setOnPreferenceChangeListener(this);
+
+        //mQuickPulldown = (ListPreference) findPreference(QUICK_SETTTINGS_PULLDOWN);
+        //mQuickPulldown.setOnPreferenceChangeListener(this);
+        //int quickPullDownValue = Settings.System.getInt(getContentResolver(), Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 0);
+        //mQuickPulldown.setValue(String.valueOf(quickPullDownValue));
+        //updatePulldownSummary(quickPullDownValue);
     }
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
+        //if (preference == mCustomHeaderImage) {
+        //    final boolean value = ((CheckBoxPreference)preference).isChecked();
+        //    Settings.System.putInt(getContentResolver(),
+        //            Settings.System.STATUS_BAR_CUSTOM_HEADER, value ? 1 : 0);
+        //    return true;
+        //}
+        // If we didn't handle it, let preferences handle it.
         return super.onPreferenceTreeClick(preference);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mAmbientMedia) {
-            String value = (String) newValue;
-            Settings.System.putInt(getContentResolver(), Settings.System.FORCE_AMBIENT_FOR_MEDIA, Integer.valueOf(value));
-            int valueIndex = mAmbientMedia.findIndexOfValue(value);
-            mAmbientMedia.setSummary(mAmbientMedia.getEntries()[valueIndex]);
-        }
         return true;
     }
 
