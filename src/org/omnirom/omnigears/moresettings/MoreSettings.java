@@ -59,14 +59,6 @@ public class MoreSettings extends SettingsPreferenceFragment implements OnPrefer
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.more_settings);
-        // check for disabled logcat app
-        Preference logcatApp = findPreference("logcat_app");
-        if (logcatApp != null) {
-            PreferenceCategory systemPrefs = (PreferenceCategory) findPreference("category_system");
-            if (systemPrefs != null && !PackageUtils.isAvailableApp("org.omnirom.logcat", getActivity())) {
-                systemPrefs.removePreference(logcatApp);
-            }
-        }
 
         mScreenOffAnimation = (ListPreference) findPreference(KEY_SCREEN_OFF_ANIMATION);
         int screenOffAnimation = Settings.Global.getInt(getContentResolver(),

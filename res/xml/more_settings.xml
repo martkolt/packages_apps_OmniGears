@@ -54,16 +54,6 @@
                 android:defaultValue="false" />
 
             <Preference
-                android:key="logcat_app"
-                android:title="@string/logcat_app_title"
-                android:summary="@string/logcat_app_summary"
-                android:persistent="false" >
-                <intent android:action="android.intent.action.MAIN"
-                        android:targetPackage="org.omnirom.logcat"
-                        android:targetClass="com.pluscubed.logcat.ui.LogcatActivity" />
-            </Preference>
-
-            <Preference
                 android:key="volume_steps"
                 android:title="@string/volume_steps_title"
                 android:summary="@string/volume_steps_summary"
