@@ -622,4 +622,8 @@
     <string name="screen_off_animation_crt">CRT</string>
     <string name="screen_off_animation_scale">Scale</string>
     <string name="screen_off_animation_title">Screen off animation</string>
+
+    <!-- Face auto unlock -->
+    <string name="face_auto_unlock_title">Face auto unlock</string>
+    <string name="face_auto_unlock_summary">Dismiss lockscreen after face unlocking</string>
 </resources>

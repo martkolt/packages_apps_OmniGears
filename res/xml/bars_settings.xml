@@ -69,5 +69,11 @@
                 android:summary="@string/double_tap_sleep_lockscreen_summary"
                 android:defaultValue="false" />
 
+            <org.omnirom.omnigears.preference.SecureSettingSwitchPreference
+               android:key="face_auto_unlock"
+               android:title="@string/face_auto_unlock_title"
+               android:summary="@string/face_auto_unlock_summary"
+               android:defaultValue="false" />
+
         </PreferenceCategory>
 </PreferenceScreen>
