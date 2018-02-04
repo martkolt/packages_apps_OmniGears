@@ -19,6 +19,7 @@ package org.omnirom.omnigears.preference;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.PixelFormat;
@@ -70,8 +71,14 @@ public class ColorSelectDialog extends AlertDialog implements
     private LedColorAdapter mLedColorAdapter;
     private boolean mWithAlpha;
 
-    protected ColorSelectDialog(Context context, int initialColor) {
+    private boolean mShowLedPreview;
+    private NotificationManager mNoMan;
+    private Context mContext;
+
+    protected ColorSelectDialog(Context context, int initialColor, boolean showLedPreview) {
         super(context);
+        mContext = context;
+        mShowLedPreview = showLedPreview;
         mWithAlpha = false;
         mMultiColor = getContext().getResources().getBoolean(R.bool.config_has_multi_color_led);
         init(initialColor);
@@ -96,6 +103,9 @@ public class ColorSelectDialog extends AlertDialog implements
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View layout = mInflater.inflate(R.layout.dialog_battery_settings, null);
 
+        mNoMan = (NotificationManager)
+                mContext.getSystemService(Context.NOTIFICATION_SERVICE);
+
         mColorPicker = (ColorPickerView) layout.findViewById(R.id.color_picker_view);
         mHexColorInput = (EditText) layout.findViewById(R.id.hex_color_input);
         mNewColor = (ColorPanelView) layout.findViewById(R.id.color_panel);
@@ -109,6 +119,7 @@ public class ColorSelectDialog extends AlertDialog implements
         mHexColorInput.setOnFocusChangeListener(this);
         setAlphaSliderVisible(mWithAlpha);
         mColorPicker.setColor(color, true);
+        showLed(color);
 
         mColorList = (Spinner) layout.findViewById(R.id.color_list_spinner);
         mLedColorAdapter = new LedColorAdapter(
@@ -149,6 +160,7 @@ public class ColorSelectDialog extends AlertDialog implements
     public Bundle onSaveInstanceState() {
         Bundle state = super.onSaveInstanceState();
         state.putInt(STATE_KEY_COLOR, getColor());
+        switchOffLed();
         return state;
     }
 
@@ -166,6 +178,30 @@ public class ColorSelectDialog extends AlertDialog implements
 
         mNewColor.setColor(color);
         mHexColorInput.setText(String.format(Locale.US, format, color & mask));
+
+        showLed(color);
+    }
+
+    private void showLed(int color) {
+        if (mShowLedPreview) {
+            if (color == 0xFFFFFFFF) {
+                // argb white doesn't work
+                color = 0xffffff;
+            }
+            mNoMan.forceShowLedLight(color);
+        }
+    }
+
+    public void switchOffLed() {
+        if (mShowLedPreview) {
+            mNoMan.forceShowLedLight(-1);
+        }
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        switchOffLed();
     }
 
     public void setAlphaSliderVisible(boolean visible) {
