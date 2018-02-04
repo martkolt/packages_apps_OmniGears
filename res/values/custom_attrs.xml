@@ -24,4 +24,8 @@
         <attr name="unitsLeft" format="string|reference" />
         <attr name="unitsRight" format="string|reference" />
     </declare-styleable>
+
+    <declare-styleable name="ColorSelectPreference">
+        <attr name="ledPreview" format="boolean" />
+    </declare-styleable>
 </resources>

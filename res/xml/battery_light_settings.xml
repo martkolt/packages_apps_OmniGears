@@ -47,21 +47,25 @@
 
         <org.omnirom.omnigears.preference.ColorSelectPreference
             android:key="low_color"
+            ledPreview="true"
             android:title="@string/battery_light_low_color_title"
             android:persistent="false" />
 
         <org.omnirom.omnigears.preference.ColorSelectPreference
             android:key="medium_color"
+            ledPreview="true"
             android:title="@string/battery_light_medium_color_title"
             android:persistent="false" />
 
         <org.omnirom.omnigears.preference.ColorSelectPreference
             android:key="full_color"
+            ledPreview="true"
             android:title="@string/battery_light_full_color_title"
             android:persistent="false" />
 
         <org.omnirom.omnigears.preference.ColorSelectPreference
             android:key="really_full_color"
+            ledPreview="true"
             android:title="@string/battery_light_really_full_color_title"
             android:persistent="false" />
 
@@ -80,6 +84,7 @@
 
         <org.omnirom.omnigears.preference.ColorSelectPreference
             android:key="fast_color"
+            ledPreview="true"
             android:title="@string/fast_charging_light_color_title"
             android:summary="@string/fast_charging_light_color_summary"
             android:persistent="false"

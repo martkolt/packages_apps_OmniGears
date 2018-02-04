@@ -40,6 +40,8 @@ public class ColorSelectPreference extends Preference implements DialogInterface
     private int mColorValue;
     private Dialog mDialog;
 
+    private boolean mShowLedPreview;
+
     /**
      * @param context
      * @param attrs
@@ -47,18 +49,25 @@ public class ColorSelectPreference extends Preference implements DialogInterface
     public ColorSelectPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         mColorValue = DEFAULT_COLOR;
-        init();
+        init(context, attrs);
     }
 
     public ColorSelectPreference(Context context, int color) {
         super(context, null);
         mColorValue = color;
-        init();
+        init(context, null);
     }
 
-    private void init() {
+    public ColorSelectPreference(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+        mColorValue = DEFAULT_COLOR;
+        init(context, attrs);
+    }
+
+    private void init(Context context, AttributeSet attrs) {
         setLayoutResource(R.layout.preference_color_select);
         mResources = getContext().getResources();
+        mShowLedPreview = attrs.getAttributeBooleanValue(null, "ledPreview", false);
     }
 
     public void setColor(int color) {
@@ -99,19 +108,25 @@ public class ColorSelectPreference extends Preference implements DialogInterface
 
     public Dialog getDialog() {
         final ColorSelectDialog d = new ColorSelectDialog(getContext(),
-                0xFF000000 | mColorValue);
+                0xFF000000 | mColorValue, mShowLedPreview);
 
         d.setButton(AlertDialog.BUTTON_POSITIVE, mResources.getString(R.string.ok),
                 new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 mColorValue =  d.getColor() & 0x00FFFFFF; // strip alpha, led does not support it
+                d.switchOffLed();
                 updatePreferenceViews();
                 callChangeListener(new Integer(mColorValue));
             }
         });
         d.setButton(AlertDialog.BUTTON_NEGATIVE, mResources.getString(R.string.cancel),
-                (DialogInterface.OnClickListener) null);
+                new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                d.switchOffLed();
+            }
+        });
 
         return d;
     }
