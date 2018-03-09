@@ -15,8 +15,9 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        android:title="@string/display_rotation_title"
-        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+        android:key="rotation_settings"
+        android:title="@string/display_rotation_title" >
 
     <SwitchPreference
         android:key="accelerometer"

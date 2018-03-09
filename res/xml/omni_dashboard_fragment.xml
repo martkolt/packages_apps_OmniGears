@@ -17,4 +17,42 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/header_category_omni">
+
+    <Preference
+        android:key="device_parts"
+        android:title="@string/omni_device_parts"
+        android:icon="@drawable/ic_settings_omnigears"
+        android:fragment="org.omnirom.device.DeviceParts" />
+
+    <Preference
+        android:key="button_settings"
+        android:title="@string/button_settings_title"
+        android:icon="@drawable/ic_settings_buttons"
+        android:fragment="org.omnirom.omnigears.ButtonSettings" />
+
+    <Preference
+        android:key="bars_settings"
+        android:title="@string/bars_settings_title"
+        android:icon="@drawable/ic_bars_tile"
+        android:fragment="org.omnirom.omnigears.interfacesettings.BarsSettings" />
+
+    <Preference
+        android:key="rotation_settings"
+        android:title="@string/display_rotation_title"
+        android:summary="@string/display_rotation_summary"
+        android:icon="@drawable/ic_display_rotation_tile"
+        android:fragment="org.omnirom.omnigears.DisplayRotation" />
+
+    <Preference
+        android:key="led_settings"
+        android:title="@string/battery_light_settings_title"
+        android:icon="@drawable/ic_settings_leds"
+        android:fragment="org.omnirom.omnigears.batterylight.BatteryLightSettings" />
+
+    <Preference
+        android:key="more_settings"
+        android:title="@string/more_settings_title"
+        android:icon="@drawable/ic_settings_more"
+        android:fragment="org.omnirom.omnigears.moresettings.MoreSettings"
+        android:order="10" />
 </PreferenceScreen>

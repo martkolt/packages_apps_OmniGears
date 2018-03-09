@@ -16,8 +16,9 @@
  -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    android:key="global_actions"
-    android:title="@string/global_actions_title">
+        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+        android:key="global_actions"
+        android:title="@string/global_actions_title">
 
     <PreferenceCategory
         android:key="global_actions_anim"
