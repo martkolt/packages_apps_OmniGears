@@ -626,4 +626,6 @@
     <!-- Face auto unlock -->
     <string name="face_auto_unlock_title">Face auto unlock</string>
     <string name="face_auto_unlock_summary">Dismiss lockscreen after face unlocking</string>
+
+    <string name="keys_action_notifications">Notifications</string>
 </resources>
