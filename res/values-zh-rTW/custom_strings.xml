@@ -93,9 +93,6 @@
   <string name="statusbar_battery_summary">設置狀態欄電池風格</string>
   <string name="battery_style_title">風格</string>
   <string name="battery_percent_title">顯示百分比</string>
-  <string name="battery_percent_none">不顯示</string>
-  <string name="battery_percent_always">一直顯示</string>
-  <string name="battery_percent_expanded">完全展開</string>
   <string name="statusbar_percent_inside_title">百分比布局</string>
   <string name="statusbar_percent_inside_summary">在電池圖示中顯示百分比</string>
   <string name="statusbar_charging_image_title">充電提醒燈</string>

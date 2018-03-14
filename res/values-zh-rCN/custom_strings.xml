@@ -18,7 +18,6 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="more_settings_title">更多...</string>
   <string name="ok">确定</string>
   <string name="advanced">高级选项</string>
   <string name="profiles_add">添加...</string>
@@ -57,6 +56,7 @@
   <string name="keys_action_normal">正常按</string>
   <string name="keys_action_long">长按</string>
   <string name="keys_action_double">双击</string>
+  <string name="keys_action_all_apps">所有的应用程序</string>
   <string name="dialog_no_home_key_title">没有绑定主页键</string>
   <string name="no_home_key">您尚未将任何按键绑定到主页键上！这会导致您的设备无法正常使用！</string>
   <string name="button_volume_keys_title">音量</string>
@@ -137,7 +137,7 @@
   <string name="swap_volume_buttons_summary">根据旋转方向调整音量按键的作用</string>
   <string name="color_picker_dialog_title">颜色</string>
   <!-- Battery light settings  -->
-  <string name="battery_light_settings_title">电池指示灯设置</string>
+  <string name="batterylight_title">电池指示灯设置</string>
   <string name="battery_light_enable">启用</string>
   <string name="battery_low_pulse_title">电量低时闪烁</string>
   <string name="battery_light_only_full_charge_title">仅在充满电时点亮</string>
@@ -146,6 +146,10 @@
   <string name="battery_light_medium_color_title">正在充电</string>
   <string name="battery_light_full_color_title">已充电 (90%)</string>
   <string name="battery_light_really_full_color_title">充电完成 (100%)</string>
+  <string name="fast_color_cat_title">快速充电</string>
+  <string name="fast_charging_led_enabled_title">启用快速充电颜色</string>
+  <string name="fast_charging_led_enabled_summary">快速充电时, 当电量达到90%时使用不同的颜色</string>
+  <string name="fast_charging_light_color_title">颜色</string>
   <string name="edit_battery_settings">编辑电池设置</string>
   <string name="led_color_green">绿色</string>
   <string name="led_color_red">红色</string>
@@ -155,9 +159,6 @@
   <string name="statusbar_battery_summary">设置状态栏电池显示样式</string>
   <string name="battery_style_title">样式</string>
   <string name="battery_percent_title">显示百分比</string>
-  <string name="battery_percent_none">从不</string>
-  <string name="battery_percent_always">总是</string>
-  <string name="battery_percent_expanded">展开时</string>
   <string name="statusbar_percent_inside_title">百分比布局</string>
   <string name="statusbar_percent_inside_summary">在电池图标上显示百分比</string>
   <string name="statusbar_charging_image_title">充电指示灯</string>
@@ -167,12 +168,16 @@
   <string name="statusbar_battery_charging_color_enable_title">充电时的颜色</string>
   <string name="battery_enable_title">显示电池</string>
   <string name="button_backlight_title">按键背景灯</string>
+  <string name="button_backlight_summary">配置启用和亮度</string>
+  <string name="button_backlight_on_touch_only_title">触摸按钮</string>
+  <string name="button_backlight_on_touch_only_summary">仅在按钮触摸时启用背景灯</string>
   <string name="button_timeout_title">背光灯超时</string>
   <string name="button_timeout_summary">值为 0 时禁用</string>
   <string name="button_link_brightness">与屏幕同步</string>
   <string name="button_link_brightness_summary">使用屏幕等级亮度</string>
   <string name="button_manual_brightness">亮度等级</string>
   <string name="unit_sec">秒</string>
+  <string name="unit_msec">毫秒</string>
   <string name="button_backlight_enable_title">启用</string>
   <string name="navigation_bar_show_title">显示导航栏</string>
   <string name="navigation_bar_show_summary">强制启用导航栏</string>
@@ -184,6 +189,12 @@
   <string name="omniswitch_dialog_running_new">OmniSwitch 目前未启用。请在应用程序设置中启用它。</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch 未安装。</string>
   <string name="omniswitch_title">最近任务样式</string>
+  <string name="long_press_recents_action_title">长按最近任务按钮的动作</string>
+  <string name="long_press_recents_action_split">切换全屏</string>
+  <string name="long_press_home_action_title">长按 Home 按钮</string>
+  <string name="double_press_home_action_title">双击操作</string>
+  <string name="keys_action_recents">最近任务</string>
+  <string name="keys_action_assist">启动协助</string>
   <string name="doze_brightness_level_title">亮度等级</string>
   <!-- Lock screen config -->
   <string name="lockscreen_shortcut_title">快捷方式</string>
@@ -211,9 +222,9 @@
   <string name="lockscreen_camera_shortcut_enable_summary">可见性取决于系统设置</string>
   <string name="lockscreen_left_shortcut_enable_title">显示拨号程序或语音助手快捷方式</string>
   <string name="lockscreen_left_shortcut_enable_summary">可见性取决于系统设置</string>
+  <string name="lockscreen_category_title">锁定屏幕</string>
   <string name="notification_title">通知面板</string>
   <string name="status_bar_custom_header_title">自定义顶部图像</string>
-  <string name="status_bar_custom_header_summary">启用通知面板顶部图像</string>
   <string name="daylight_header_pack_title">顶部图像包</string>
   <string name="status_bar_custom_header_shadow_title">状态栏图片阴影</string>
   <string name="status_bar_custom_header_shadow_summary">提高在亮色图片上的能见度</string>
@@ -223,10 +234,16 @@
   <string name="custom_header_provider_title">标题来源</string>
   <string name="custom_header_browse_title">浏览已安装的标题</string>
   <string name="custom_header_browse_summary">长按任何图片以用于静态模式</string>
+  <string name="custom_header_browse_summary_new">浏览所有可用的标题包</string>
+  <string name="custom_header_pick_title">选择顶部图像</string>
+  <string name="custom_header_pick_summary">为静态模式选择图像</string>
   <string name="style_enabled_summary">自定义标题图片已开启</string>
   <string name="style_disabled_summary">自定义标题图片已关闭</string>
+  <string name="header_provider_disabled">禁用</string>
+  <string name="custom_header_title">自定义顶部图像</string>
   <!-- Network traffic -->
   <string name="network_traffic_title">网速指示器</string>
+  <string name="network_traffic_summary">状态栏网速指示器</string>
   <string name="show_network_traffic_state">状态栏网速指示器</string>
   <string name="show_network_traffic_unit">显示单位</string>
   <string name="show_network_traffic_frequency">刷新间隔</string>
@@ -243,6 +260,7 @@
   <string name="network_traffic_autohide_title">自动隐藏</string>
   <string name="network_traffic_autohide_summary">没有活动连接时自动隐藏网速指示器</string>
   <string name="network_traffic_autohide_threshold">不活动状态阈值</string>
+  <string name="network_traffic_enable_title">启用</string>
   <!-- statusbar brightness -->
   <string name="status_bar_brightness_control_title">亮度调节</string>
   <string name="status_bar_brightness_control_summary">在状态栏上左右滑动以调整亮度</string>
@@ -291,12 +309,12 @@
   <string name="global_actions_voiceassist_title">语音助手</string>
   <string name="global_actions_silent_title">静音模式</string>
   <string name="global_actions_dnd_title">勿扰</string>
-  <string name="global_actions_title">电源菜单</string>
   <string name="global_actions_summary">电源菜单选项</string>
   <string name="global_actions_header">部分选项根据设置仅在解锁后出现</string>
   <string name="global_actions_anim">布局</string>
   <string name="global_actions_advanced_reboot_summary">在重新启动菜单中显示更多选项</string>
   <string name="global_actions_advanced_reboot_title">启用高级重启</string>
+  <string name="global_actions_advanced_reboot_summary_new">如果未锁定将在重新启动菜单中显示更多选项</string>
   <string name="font_sample_text">11:57</string>
   <string name="screenshot_crop_and_share_title">屏幕截图 裁剪 &amp; 分享</string>
   <string name="screenshot_crop_and_share_summary">截图后显示编辑窗口以提供如裁剪、 保存或共享等操作</string>
@@ -306,6 +324,8 @@
   <string name="lockscreen_qs_summary">屏幕锁定时禁用快捷方式和展开快速设置</string>
   <string name="lockscreen_qs_disabled_summary">屏幕锁定时启用快速设置</string>
   <string name="lockscreen_qs_enabled_summary">屏幕锁定时禁用快速设置</string>
+  <string name="lockscreen_power_menu_disabled_title">锁定时禁用电源菜单</string>
+  <string name="lockscreen_power_menu_disabled_summary">安全锁屏时禁用电源菜单</string>
   <string name="status_bar_quick_qs_pulldown_title">快速下拉</string>
   <string name="status_bar_quick_qs_pulldown_summary">从状态栏的%1$s边缘拉下开启快速设置面板</string>
   <string name="status_bar_quick_qs_pulldown_summary_left">左侧</string>
@@ -436,7 +456,6 @@
   <string name="headset_plugged_notification_summary">当连接有线耳机时显示通知</string>
   <!-- Display : Rotation -->
   <string name="category_display">显示</string>
-  <string name="display_rotation_title">旋转</string>
   <string name="display_rotation_disabled">禁用</string>
   <string name="display_rotation_unit">度</string>
   <string name="display_rotation_category_title">旋转模式</string>
@@ -450,6 +469,7 @@
   <string name="lockscreen_hide_status_bar_title">隐藏状态栏</string>
   <string name="lockscreen_hide_status_bar_summary">触摸状态栏以显示状态栏</string>
   <string name="status_bar_logo_title">状态栏图标</string>
+  <string name="status_bar_logo_summary">一个小的swag</string>
   <!-- Doze settings editor -->
   <string name="doze_settings_title">休眠设置</string>
   <string name="doze_settings_summary">更改休眠设置</string>
@@ -463,4 +483,26 @@
   <string name="string_default">默认</string>
   <string name="action_filter">筛选</string>
   <string name="doze_settings_applied">应用设置</string>
+  <string name="SHORT_MIN_DEEP_MAINTENANCE_TIME">维护模式全打盹最小超时</string>
+  <string name="SHORT_KEY_NOTIFICATION_WHITELIST_DURATION">最大通知白名单持续时间</string>
+  <string name="logcat_app_title">MatLog</string>
+  <string name="logcat_app_summary">启动应用程序以收集日志</string>
+  <string name="omni_theme_title">Omni 明亮/黑暗 主题</string>
+  <string name="omni_theme_summary">基于Substratum的主题</string>
+  <string name="show_dashboard_columns_title">使用列布局</string>
+  <string name="show_dashboard_columns_summary">显示主页设置</string>
+  <string name="hide_dashboard_summary_title">隐藏摘要</string>
+  <string name="hide_dashboard_summary_summary">显示主页设置</string>
+  <string name="systemui_theme_style_title">状态栏风格</string>
+  <string name="systemui_theme_style_auto">壁纸集</string>
+  <string name="systemui_theme_style_light">亮色主题</string>
+  <string name="systemui_theme_style_dark">黑暗主题</string>
+  <string name="volume_steps_title">音量步阶</string>
+  <string name="volume_steps_summary">为不同的音量配置相应的步数</string>
+  <string name="volume_steps_30">30步</string>
+  <string name="volume_steps_15">15步</string>
+  <string name="volume_steps_7">7步</string>
+  <string name="volume_steps_5">5步</string>
+  <string name="system_volume_option_title">系统音量</string>
+  <string name="call_volume_option_title">语音通话音量</string>
 </resources>
