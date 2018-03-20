@@ -18,7 +18,6 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="more_settings_title">OmniGears - več …</string>
   <string name="ok">V redu</string>
   <string name="advanced">Napredno</string>
   <string name="profiles_add">Dodaj …</string>
@@ -154,9 +153,6 @@
   <string name="statusbar_battery_summary">Nastavi slog prikaza baterije v vrstici stanja</string>
   <string name="battery_style_title">Slog</string>
   <string name="battery_percent_title">Prikaži odstotek</string>
-  <string name="battery_percent_none">Nikoli</string>
-  <string name="battery_percent_always">Vedno</string>
-  <string name="battery_percent_expanded">Razširjeno</string>
   <string name="statusbar_percent_inside_title">Odstotek prekrivno</string>
   <string name="statusbar_percent_inside_summary">Prikaži odstotek preko slike baterije</string>
   <string name="statusbar_charging_image_title">Kazalnik polnjenja</string>
@@ -212,7 +208,6 @@
   <string name="lockscreen_left_shortcut_enable_summary">Vidnost je odvisna od sistemskih nastavitev</string>
   <string name="notification_title">Plošča obvestil</string>
   <string name="status_bar_custom_header_title">Slika glave po meri</string>
-  <string name="status_bar_custom_header_summary">Omogoči sliko glave plošče obvestil</string>
   <string name="daylight_header_pack_title">Paket slik glave</string>
   <string name="status_bar_custom_header_shadow_title">Senčenje slike glave</string>
   <string name="status_bar_custom_header_shadow_summary">Za boljšo vidnost na svetlih slikah</string>
@@ -290,7 +285,6 @@
   <string name="global_actions_voiceassist_title">Glasovna pomoč</string>
   <string name="global_actions_silent_title">Tihi način</string>
   <string name="global_actions_dnd_title">Ne moti</string>
-  <string name="global_actions_title">Meni gumba za vklop</string>
   <string name="global_actions_summary">Dejanja menija gumba za vklop/izklop</string>
   <string name="global_actions_header">Nekatera dejanja so vidna glede na nastavitev ali samo, če je naprava odklenjena</string>
   <string name="global_actions_anim">Videz</string>
@@ -436,7 +430,6 @@
   <string name="headset_plugged_notification_summary">Prikaži obvestilo, ko so priklopljene slušalke</string>
   <!-- Display : Rotation -->
   <string name="category_display">Zaslon</string>
-  <string name="display_rotation_title">Obračanje</string>
   <string name="display_rotation_disabled">Onemogoči</string>
   <!-- Doze settings editor -->
 </resources>

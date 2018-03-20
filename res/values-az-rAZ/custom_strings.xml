@@ -18,7 +18,6 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="more_settings_title">OmniGears Daha Çox...</string>
   <string name="ok">Oldu</string>
   <string name="advanced">Ətraflı</string>
   <string name="profiles_add">Əlavə Et...</string>
@@ -117,9 +116,6 @@
   <string name="statusbar_battery_summary">Status barında batareya göstərişi stilini təyin et</string>
   <string name="battery_style_title">Stil</string>
   <string name="battery_percent_title">Faizi göstər</string>
-  <string name="battery_percent_none">Heç vaxt</string>
-  <string name="battery_percent_always">Həmişə</string>
-  <string name="battery_percent_expanded">Genişlədilmiş</string>
   <string name="statusbar_percent_inside_title">Faiz üzlüyü</string>
   <string name="statusbar_percent_inside_summary">Batareya faizini ikonun üzərində göstər</string>
   <string name="statusbar_charging_image_title">Şarj indikatoru</string>
@@ -204,7 +200,6 @@
   <string name="global_actions_voiceassist_title">Səsli köməkçi</string>
   <string name="global_actions_silent_title">Səssiz mod</string>
   <string name="global_actions_dnd_title">Narahat etməyin</string>
-  <string name="global_actions_title">Güc menyusu</string>
   <string name="global_actions_summary">Güc menyusunda göstərilən əməllər</string>
   <string name="global_actions_anim">Görünüş</string>
   <string name="global_actions_advanced_reboot_summary">Yenidən başlatma menyusunda daha çox parametr göstər</string>
@@ -299,7 +294,6 @@
   <string name="headset_plugged_notification_title">Qulaqcıq bildirişi</string>
   <!-- Display : Rotation -->
   <string name="category_display">Ekran</string>
-  <string name="display_rotation_title">Ekranı Fırlatmaq</string>
   <string name="display_rotation_disabled">Qeyri-Aktiv</string>
   <string name="display_rotation_unit">dərəcə</string>
   <string name="display_rotation_category_title">Fırlanma modları</string>

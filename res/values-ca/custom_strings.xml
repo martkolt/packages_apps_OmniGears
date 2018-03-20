@@ -143,9 +143,6 @@
   <string name="statusbar_battery_summary">Estableix l\'estil de visualització de la bateria a la barra d\'estat</string>
   <string name="battery_style_title">Estil</string>
   <string name="battery_percent_title">Mostra el percentatge</string>
-  <string name="battery_percent_none">Mai</string>
-  <string name="battery_percent_always">Sempre</string>
-  <string name="battery_percent_expanded">Ampliat</string>
   <string name="statusbar_percent_inside_title">Percentatge superposat</string>
   <string name="statusbar_percent_inside_summary">Mostra el percentatge damunt de la imatge de la bateria</string>
   <string name="statusbar_charging_image_title">Indicador de càrrrega</string>
@@ -197,7 +194,6 @@
   <string name="lockscreen_left_shortcut_enable_summary">La visibilitat depèn de la configuració del sistema</string>
   <string name="notification_title">Tauler d\'avisos</string>
   <string name="status_bar_custom_header_title">Imatge de capçalera personalitzada</string>
-  <string name="status_bar_custom_header_summary">Habilita la imatge de capçalera del tauler d\'avisos</string>
   <string name="daylight_header_pack_title">Paquet d\'imatges de capçalera</string>
   <string name="status_bar_custom_header_shadow_title">Ombra de la imatge de capçalera</string>
   <string name="status_bar_custom_header_shadow_summary">Per a millor visibilitat en imatges brillants</string>
@@ -267,7 +263,6 @@
   <string name="global_actions_voiceassist_title">Ajuda de veu</string>
   <string name="global_actions_silent_title">Mode silenciós</string>
   <string name="global_actions_dnd_title">No molesteu</string>
-  <string name="global_actions_title">Menú d\'encesa</string>
   <string name="global_actions_summary">Accions que es mostren al menú d\'encesa</string>
   <string name="global_actions_header">Algunes accions són visibles segons la configuració o si el dispositiu està desbloquejat</string>
   <string name="font_sample_text">11:57</string>

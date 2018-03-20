@@ -18,7 +18,6 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="more_settings_title">OmniGears Plus…</string>
   <string name="ok">OK</string>
   <string name="advanced">Paramètres avancés</string>
   <string name="profiles_add">Ajouter…</string>
@@ -57,6 +56,7 @@
   <string name="keys_action_normal">Appui normal</string>
   <string name="keys_action_long">Appui long</string>
   <string name="keys_action_double">Double appui</string>
+  <string name="keys_action_all_apps">Toutes les applications</string>
   <string name="dialog_no_home_key_title">Pas de bouton Accueil</string>
   <string name="no_home_key">Vous n\'avez pas de bouton assigner à l\'action «Accueil» ! Cela peut rendre votre appareil inutilisable!</string>
   <string name="button_volume_keys_title">Volume</string>
@@ -140,11 +140,16 @@
   <string name="batterylight_title">Paramètres d\'éclairage LED de la batterie</string>
   <string name="battery_light_enable">Activer</string>
   <string name="battery_low_pulse_title">Clignoter si la batterie est faible</string>
+  <string name="battery_light_only_full_charge_title">S’allume uniquement lorsque la charge est complète</string>
   <string name="battery_light_list_title">Couleurs</string>
   <string name="battery_light_low_color_title">Batterie faible</string>
   <string name="battery_light_medium_color_title">En charge</string>
   <string name="battery_light_full_color_title">Chargée (90%)</string>
   <string name="battery_light_really_full_color_title">Chargée (100%)</string>
+  <string name="fast_color_cat_title">Charge rapide</string>
+  <string name="fast_charging_led_enabled_title">Activer la couleur de chargement rapide</string>
+  <string name="fast_charging_led_enabled_summary">Lors d\'une charge rapide, utilisez une couleur différente jusqu\'à 90% de la charge</string>
+  <string name="fast_charging_light_color_title">Couleur</string>
   <string name="edit_battery_settings">Éditer les paramètres de la batterie</string>
   <string name="led_color_green">Vert</string>
   <string name="led_color_red">Rouge</string>
@@ -154,9 +159,6 @@
   <string name="statusbar_battery_summary">Définit le style d\'affichage de la batterie dans la barre d\'état</string>
   <string name="battery_style_title">Style</string>
   <string name="battery_percent_title">Afficher le pourcentage</string>
-  <string name="battery_percent_none">Jamais</string>
-  <string name="battery_percent_always">Toujours</string>
-  <string name="battery_percent_expanded">Étendu</string>
   <string name="statusbar_percent_inside_title">Superposition du pourcentage</string>
   <string name="statusbar_percent_inside_summary">Affiche le pourcentage au dessus de l\'icône de batterie</string>
   <string name="statusbar_charging_image_title">Indicateur de charge</string>
@@ -166,12 +168,16 @@
   <string name="statusbar_battery_charging_color_enable_title">Couleurs pendant la charge</string>
   <string name="battery_enable_title">Afficher la batterie</string>
   <string name="button_backlight_title">Rétro-éclairage des boutons</string>
+  <string name="button_backlight_summary">Configurer activation et Luminosité</string>
+  <string name="button_backlight_on_touch_only_title">Bouton tactile</string>
+  <string name="button_backlight_on_touch_only_summary">Activer l\'éclairage arrière avec une pause à l\'appuie du bouton seulement</string>
   <string name="button_timeout_title">Délai d\'extinction du rétro-éclairage</string>
   <string name="button_timeout_summary">Désactivé lorsque la valeur est égale à 0</string>
   <string name="button_link_brightness">Lier à l\'écran</string>
   <string name="button_link_brightness_summary">Utiliser la luminosité de l\'écran</string>
   <string name="button_manual_brightness">Niveau de luminosité</string>
   <string name="unit_sec">sec</string>
+  <string name="unit_msec">ms</string>
   <string name="button_backlight_enable_title">Activé</string>
   <string name="navigation_bar_show_title">Afficher la barre de navigation</string>
   <string name="navigation_bar_show_summary">Forcer l\'activation de la barre de navigation</string>
@@ -183,6 +189,12 @@
   <string name="omniswitch_dialog_running_new">OmniSwitch n\'est actuellement pas activé. Veuillez l\'activer dans les paramètres.</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch n\'est pas installé.</string>
   <string name="omniswitch_title">Style des applications récentes</string>
+  <string name="long_press_recents_action_title">Action d\'appui long sur récents</string>
+  <string name="long_press_recents_action_split">Basculer l\'écran partagé</string>
+  <string name="long_press_home_action_title">Action sur appui long bouton Home</string>
+  <string name="double_press_home_action_title">Action sur double tap bouton Home</string>
+  <string name="keys_action_recents">Récents</string>
+  <string name="keys_action_assist">Assistant de lancement</string>
   <string name="doze_brightness_level_title">Niveau de luminosité</string>
   <!-- Lock screen config -->
   <string name="lockscreen_shortcut_title">Raccourcis</string>
@@ -210,9 +222,9 @@
   <string name="lockscreen_camera_shortcut_enable_summary">La visibilité dépend de la configuration du système</string>
   <string name="lockscreen_left_shortcut_enable_title">Afficher le raccourci du téléphone ou de l\'assistant vocal</string>
   <string name="lockscreen_left_shortcut_enable_summary">La visibilité dépend de la configuration du système</string>
+  <string name="lockscreen_category_title">Écran de verrouillage</string>
   <string name="notification_title">Panneau de notification</string>
   <string name="status_bar_custom_header_title">Personnalisation d\'en-tête</string>
-  <string name="status_bar_custom_header_summary">Affiche une bannière dans le panneau de notification</string>
   <string name="daylight_header_pack_title">Pack d\'image d\'en-tête</string>
   <string name="status_bar_custom_header_shadow_title">Ombrage de l\'image d\'en-tête</string>
   <string name="status_bar_custom_header_shadow_summary">Pour une meilleure visibilité des images lumineuses</string>
@@ -222,10 +234,16 @@
   <string name="custom_header_provider_title">Fournisseur de l’en-tête</string>
   <string name="custom_header_browse_title">Parcourir les en-têtes installées</string>
   <string name="custom_header_browse_summary">Un appui long sur une image permet de l\'utiliser en mode statique</string>
+  <string name="custom_header_browse_summary_new">Parcourir toutes les en-têtes de pack</string>
+  <string name="custom_header_pick_title">Définir l\'image d\'en-tête</string>
+  <string name="custom_header_pick_summary">Sélectionner une image pour le mode statique</string>
   <string name="style_enabled_summary">Personnalisation d\'en-tête activée</string>
   <string name="style_disabled_summary">Personnalisation d\'en-tête désactivée</string>
+  <string name="header_provider_disabled">Désactivé</string>
+  <string name="custom_header_title">Personnalisation de l\'image d\'en-tête</string>
   <!-- Network traffic -->
   <string name="network_traffic_title">Trafic réseau</string>
+  <string name="network_traffic_summary">Indicateur d\'activité réseau dans la barre d\'état</string>
   <string name="show_network_traffic_state">Indicateur de trafic dans la barre d\'état</string>
   <string name="show_network_traffic_unit">Afficher l\'unité</string>
   <string name="show_network_traffic_frequency">Fréquence d\'actualisation</string>
@@ -242,6 +260,7 @@
   <string name="network_traffic_autohide_title">Masquer automatiquement</string>
   <string name="network_traffic_autohide_summary">Masque le moniteur de trafic lorsqu\'il n\'y a aucune activité</string>
   <string name="network_traffic_autohide_threshold">Seuil d\'inactivité</string>
+  <string name="network_traffic_enable_title">Activer</string>
   <!-- statusbar brightness -->
   <string name="status_bar_brightness_control_title">Contrôle de la luminosité</string>
   <string name="status_bar_brightness_control_summary">Ajuster la luminosité du rétroéclairage en glissant votre doigt sur la barre d\'état</string>
@@ -290,12 +309,12 @@
   <string name="global_actions_voiceassist_title">Assistant vocal</string>
   <string name="global_actions_silent_title">Mode silencieux</string>
   <string name="global_actions_dnd_title">Ne pas déranger</string>
-  <string name="global_actions_title">Menu Marche/Arrêt</string>
   <string name="global_actions_summary">Actions affichées dans le menu Marche/Arrêt</string>
   <string name="global_actions_header">Certaines actions sont uniquement visibles en fonction de la configuration ou seulement si l\'appareil est déverrouillé</string>
   <string name="global_actions_anim">Apparence</string>
   <string name="global_actions_advanced_reboot_summary">Affiche plus d\'options dans le menu redémarrer</string>
   <string name="global_actions_advanced_reboot_title">Activer le redémarrage avancé</string>
+  <string name="global_actions_advanced_reboot_summary_new">Affiche plus d\'options dans le menu redémarrer si non verrouillé</string>
   <string name="font_sample_text">11:57</string>
   <string name="screenshot_crop_and_share_title">Rogner &amp; partager les captures d’écran</string>
   <string name="screenshot_crop_and_share_summary">Affiche une fenêtre d’édition après avoir pris une capture d’écran afin d’effectuer des opérations telles que rogner, sauvegarder ou partager celle-ci</string>
@@ -305,6 +324,8 @@
   <string name="lockscreen_qs_summary">Désactive l’affichage des raccourcis et des paramètres rapides sur l\'écran de verrouillage</string>
   <string name="lockscreen_qs_disabled_summary">L’accès aux paramètres rapides sur l’écran de verrouillage est activé</string>
   <string name="lockscreen_qs_enabled_summary">L’accès aux paramètres rapides sur l’écran de verrouillage est désactivé</string>
+  <string name="lockscreen_power_menu_disabled_title">Désactiver le menu d\'alimentation lorsque verrouillé</string>
+  <string name="lockscreen_power_menu_disabled_summary">Désactiver le menu d\'alimentation sur les écrans de verrouillage sécurisé</string>
   <string name="status_bar_quick_qs_pulldown_title">Accès rapide au volet des paramètres</string>
   <string name="status_bar_quick_qs_pulldown_summary">Glisser sur le coté %1$s de la barre d’état pour afficher les paramètres rapides</string>
   <string name="status_bar_quick_qs_pulldown_summary_left">Gauche</string>
@@ -364,7 +385,9 @@
   <!-- Hostname setting -->
   <string name="device_hostname">Nom d’hôte de l’appareil</string>
   <!-- OMS -->
+  <string name="theming_title">Thèmes</string>
   <string name="oms_app_title">Substratum theme engine</string>
+  <string name="oms_app_summary">Commencer l\'expérience substratum</string>
   <string name="status_bar_ime_notification_title">Afficher la notification du mode de saisie</string>
   <string name="status_bar_ime_notification_summary">Si la barre de navigation n\'est pas disponible</string>
   <string name="navigation_bar_ime_button_title">Afficher le bouton du mode de saisie dans la barre de navigation</string>
@@ -380,6 +403,7 @@
   <string name="lockscreen_hide_media_summary">Ne pas utiliser les métadonnées des médias comme fond d’écran de verrouillage</string>
   <string name="omni_notification_light_settings_summary">Personnalise les éclairages led de notification pour les applications</string>
   <string name="omni_battery_light_settings_summary">Personnalise la couleur de la Led de notification de la batterie</string>
+  <string name="night_mode_title">Thème Clair/Sombre</string>
   <string name="night_mode_summary">%s</string>
   <string name="night_mode_no">Clair</string>
   <string name="night_mode_yes">Sombre</string>
@@ -390,18 +414,28 @@
   <string name="since_reset">La réinitialisation</string>
   <string name="since_unplug">La déconnexion</string>
   <string name="other">Activité</string>
+  <string name="kernel_wakelocks">Wakelocks du noyau</string>
+  <string name="partial_wakelocks">Wakelocks Partiel</string>
+  <string name="app_wakelocks">Wakelocks d\'app</string>
+  <string name="create_ref">Réinitialiser</string>
   <string name="spinner_period_title">Depuis</string>
   <string name="spinner_type_title">Afficher</string>
   <string name="screen_on_time">Écran activé</string>
   <string name="awake_time">Réveillé</string>
   <string name="deep_sleep_time">Veille Profonde</string>
+  <string name="no_kernel_wakelock_file_found">Pas de fichier de statuts trouvé pour le wakelock du noyau /proc/wakelocks ou /système/kernel/debug/wakeup_sources.</string>
   <string name="more_line_text">plus\u2026</string>
+  <string name="state_core_mode">Coeurs</string>
+  <string name="kernel_wakelock_time">Wakelocks du noyau</string>
+  <string name="user_wakelock_time">Wakelocks Partiel</string>
   <string name="battery_change">Remplacement de la Batterie</string>
   <string name="spinner_state_time_title">Durée</string>
   <string name="total_time">Total</string>
   <string name="wakelock_time">Wakelocks</string>
   <string name="copy_as_text">Copier en tant que texte</string>
+  <string name="google_it">Chercher sur Google</string>
   <string name="app_details">Détails de l\'application</string>
+  <string name="no_stat_because_reset_state">Appuyer sur réinitialiser pour démarrer la collecte des données d\'état</string>
   <string name="no_stat_because_reset_wakelock">Appuyer sur réinitialiser pour démarrer la collecte des données wakelock</string>
   <string name="no_stat_because_plugged">Veuillez débrancher l\'alimentation pour obtenir les données wakelock</string>
   <string name="no_states_file_found">Aucun log d\'activité n\'a été trouvé. Êtes-vous sûr que votre téléphone est
@@ -424,7 +458,6 @@
   <string name="headset_plugged_notification_summary">Affiche une notification lorsque des écouteurs filaires sont connectés</string>
   <!-- Display : Rotation -->
   <string name="category_display">Affichage</string>
-  <string name="display_rotation_title">Rotation</string>
   <string name="display_rotation_disabled">Désactivée</string>
   <string name="display_rotation_unit">degrés</string>
   <string name="display_rotation_category_title">Modes de rotation</string>
@@ -433,9 +466,16 @@
   <string name="display_rotation_180_title">180 degrés</string>
   <string name="display_rotation_270_title">270 degrés</string>
   <string name="display_lockscreen_rotation_title">Écran de verrouillage</string>
+  <string name="volume_button_force_media_title">Forcer le volume média</string>
+  <string name="volume_button_force_media_summary">Le volume du média sera modifié par défaut</string>
   <string name="lockscreen_hide_status_bar_title">Masquer la barre d\'État</string>
   <string name="lockscreen_hide_status_bar_summary">Toucher la barre d\'état pour le faire apparaitre ou disparaitre</string>
+  <string name="status_bar_logo_title">Logo de la barre d\'état</string>
+  <string name="status_bar_logo_summary">Un peu swag</string>
   <!-- Doze settings editor -->
+  <string name="doze_settings_title">Paramètres de mise en veille</string>
+  <string name="doze_settings_summary">Modifier les paramètres de configuration de la mise en veille</string>
+  <string name="action_save">Enregistrer</string>
   <string name="action_restoredefault">Rétablir les paramètres par défaut</string>
   <string name="action_profile">Profils</string>
   <string name="action_save_as_profile">Enregistrer en tant que profil</string>
@@ -444,5 +484,34 @@
   <string name="string_seconds">secondes</string>
   <string name="string_default">Par défaut</string>
   <string name="action_filter">Filtre</string>
+  <string name="doze_settings_applied">Paramètres appliqués</string>
   <string name="DESC_INACTIVE_TIMEOUT">C\'est le temps, après un délai d\'inactivité, à partir duquel on commence à vérifier le capteur de mouvement pour déterminer si l\'appareil n\'est pas porté et est immobile. Nous ne le faisons pas immédiatement après un temps d\'inactivité car nous ne voulons pas continuer à utiliser le capteur de mouvement à chaque fois que l\'écran s\'éteint</string>
+  <string name="DESC_SENSING_TIMEOUT">Si nous ne recevons un rappel de AnyMotion dans ce laps de temps + locating_to, nous allons changer de STATE_SENSING à STATE_INACTIVE, et tous les rappels de AnyMotion passés hors STATE_SENSING seront ignorés</string>
+  <string name="DESC_LOCATING_TIMEOUT">C\'est le temps que nous attendrons pour obtenir une bonne localisation avant de passer en mode veille</string>
+  <string name="DESC_LOCATION_ACCURACY">La précision maximale désirée (en mètres) pour laquelle nous considérons la localisation être suffisante pour passer en veille. Nous allons essayer d’obtenir une précision équivalente ou jusqu\'à l’expiration de la locating_to</string>
+  <string name="DESC_LIGHT_MAX_IDLE_TIMEOUT">C\'est la durée maximum d\'exécution en mode de maintenance inactif</string>
+  <string name="SHORT_INACTIVE_TIMEOUT">Délai d’inactivité</string>
+  <string name="SHORT_LOCATION_ACCURACY">Précision de la localisation</string>
+  <string name="SHORT_IDLE_TIMEOUT">Délai d’inactivité</string>
+  <string name="SHORT_MAX_IDLE_TIMEOUT">Délai maximum d\'inactivité</string>
+  <string name="logcat_app_title">MatLog</string>
+  <string name="logcat_app_summary">Démarrer l\'application pour collecter les logs</string>
+  <string name="omni_theme_title">Thème Sombre/Clair</string>
+  <string name="omni_theme_summary">Thème basé sur Substratum</string>
+  <string name="show_dashboard_columns_title">Disposition en colonnes</string>
+  <string name="show_dashboard_columns_summary">Dans les réglages de la page principale</string>
+  <string name="hide_dashboard_summary_title">Masquer le résumé</string>
+  <string name="hide_dashboard_summary_summary">Dans les réglages de la page principale</string>
+  <string name="systemui_theme_style_title">Style SystemUI</string>
+  <string name="systemui_theme_style_auto">Basé sur le fond d\'écran</string>
+  <string name="systemui_theme_style_light">Style clair</string>
+  <string name="systemui_theme_style_dark">Style sombre</string>
+  <string name="volume_steps_title">Incrémentation du volume</string>
+  <string name="volume_steps_summary">Configurez les incréments pour les volumes audio</string>
+  <string name="volume_steps_30">30 incréments</string>
+  <string name="volume_steps_15">15 incréments</string>
+  <string name="volume_steps_7">7 incréments</string>
+  <string name="volume_steps_5">5 incréments</string>
+  <string name="system_volume_option_title">Volume principal</string>
+  <string name="call_volume_option_title">Volume pendant un appel</string>
 </resources>

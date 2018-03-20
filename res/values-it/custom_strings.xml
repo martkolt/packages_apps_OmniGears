@@ -18,7 +18,6 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="more_settings_title">Altro di OmniGears...</string>
   <string name="ok">OK</string>
   <string name="advanced">Avanzate</string>
   <string name="profiles_add">Aggiungi...</string>
@@ -57,6 +56,7 @@
   <string name="keys_action_normal">Pressione normale</string>
   <string name="keys_action_long">Pressione lunga</string>
   <string name="keys_action_double">Doppio tocco</string>
+  <string name="keys_action_all_apps">Tutte le applicazioni</string>
   <string name="dialog_no_home_key_title">Nessuna azione tasto Home</string>
   <string name="no_home_key">Non hai assegnato nessuna azione al tasto \"Home\"! Questo può rendere il dispositivo inutilizzabile!</string>
   <string name="button_volume_keys_title">Volume</string>
@@ -74,7 +74,7 @@
   <string name="button_home_answers_call_summary">Premendo il pulsante home si risponderà alla chiamata in arrivo</string>
   <string name="button_other_title">Altro</string>
   <string name="keys_action_app_switch_card">AOSP (pila)</string>
-  <string name="keys_action_omniswitch_short">OmniSwitch</string>
+  <string name="keys_action_omniswitch_short">Interruttore di Omni</string>
   <string name="keys_action_app_switch_grid">AOSP (griglia)</string>
   <string name="button_back_kill_enable_title">Termina app con tasto indietro</string>
   <string name="button_back_kill_enable_summary">Termina app in primo piano premendo a lungo il tasto indietro</string>
@@ -146,18 +146,19 @@
   <string name="battery_light_medium_color_title">In carica</string>
   <string name="battery_light_full_color_title">Carica (90%)</string>
   <string name="battery_light_really_full_color_title">Carica (100%)</string>
+  <string name="fast_color_cat_title">Ricarica rapida</string>
+  <string name="fast_charging_led_enabled_title">Abilita il colore della ricarica veloce</string>
+  <string name="fast_charging_led_enabled_summary">Durante la ricarica rapida, usa colori diversi fino al 90% di batteria</string>
+  <string name="fast_charging_light_color_title">Colore</string>
   <string name="edit_battery_settings">Modifica impostazioni batteria</string>
   <string name="led_color_green">Verde</string>
   <string name="led_color_red">Rosso</string>
   <string name="led_color_blue">Blu</string>
   <string name="statusbar_title">Barra di stato</string>
-  <string name="battery_title">Visualizza batteria</string>
+  <string name="battery_title">Display della batteria</string>
   <string name="statusbar_battery_summary">Imposta stile visualizzazione stato batteria</string>
   <string name="battery_style_title">Stile</string>
   <string name="battery_percent_title">Visualizza percentuale</string>
-  <string name="battery_percent_none">Mai</string>
-  <string name="battery_percent_always">Sempre</string>
-  <string name="battery_percent_expanded">Espanso</string>
   <string name="statusbar_percent_inside_title">Percentuale sovrapposizione</string>
   <string name="statusbar_percent_inside_summary">Visualizza percentuale in alto sull\'immagine batteria</string>
   <string name="statusbar_charging_image_title">Indicatore di carica</string>
@@ -167,12 +168,16 @@
   <string name="statusbar_battery_charging_color_enable_title">Colore in carica</string>
   <string name="battery_enable_title">Visualizza batteria</string>
   <string name="button_backlight_title">Illuminazione tasti</string>
+  <string name="button_backlight_summary">Configurare l\'attivazione e la luminosità</string>
+  <string name="button_backlight_on_touch_only_title">Tocco del tasto</string>
+  <string name="button_backlight_on_touch_only_summary">Attivare la retroilluminazione con timeout solo al tocco del tasto</string>
   <string name="button_timeout_title">Timer retroilluminazione</string>
   <string name="button_timeout_summary">Disattiva con valore 0</string>
   <string name="button_link_brightness">Collega allo schermo</string>
   <string name="button_link_brightness_summary">Usa livello luminosità schermo</string>
   <string name="button_manual_brightness">Livello luminosità</string>
   <string name="unit_sec">sec</string>
+  <string name="unit_msec">ms</string>
   <string name="button_backlight_enable_title">Abilita</string>
   <string name="navigation_bar_show_title">Visualizza barra navigazione</string>
   <string name="navigation_bar_show_summary">Forza attivazione barra navigazione</string>
@@ -181,9 +186,15 @@
   <string name="navbar_title">Barra di navigazione</string>
   <string name="navbar_recents_style_title">Stile recenti</string>
   <string name="omniswitch_settings">Impostazioni</string>
-  <string name="omniswitch_dialog_running_new">OmniSwitch non è attualmente abilitato. Per favore abilitalo nelle impostazioni dell\'app.</string>
-  <string name="omniswitch_dialog_unavail">OmniSwitch non è installato.</string>
+  <string name="omniswitch_dialog_running_new">L\'interruttore di Omni non è attualmente abilitato. Per favore abilitalo nelle impostazioni dell\'app.</string>
+  <string name="omniswitch_dialog_unavail">L\'interruttore di Omni non è installato.</string>
   <string name="omniswitch_title">Stili recenti</string>
+  <string name="long_press_recents_action_title">Azione alla pressione prolungata del tasto recenti</string>
+  <string name="long_press_recents_action_split">Attiva schermo diviso</string>
+  <string name="long_press_home_action_title">Azione a pressione prolungata sul tasto home</string>
+  <string name="double_press_home_action_title">Azione doppio tap per la home</string>
+  <string name="keys_action_recents">Recenti</string>
+  <string name="keys_action_assist">Avvia assistente</string>
   <string name="doze_brightness_level_title">Livello luminosità</string>
   <!-- Lock screen config -->
   <string name="lockscreen_shortcut_title">Scorciatoie</string>
@@ -211,9 +222,9 @@
   <string name="lockscreen_camera_shortcut_enable_summary">La visibilità dipende dalla configurazione del sistema</string>
   <string name="lockscreen_left_shortcut_enable_title">Mostra la scorciatoia per il telefono o per l\'assistente vocale</string>
   <string name="lockscreen_left_shortcut_enable_summary">La visibilità dipende dalla configurazione di sistema</string>
+  <string name="lockscreen_category_title">Schermata di blocco</string>
   <string name="notification_title">Pannello notifiche</string>
   <string name="status_bar_custom_header_title">Immagine intestazione personalizzata</string>
-  <string name="status_bar_custom_header_summary">Abilita immagine intestazione nel pannello notifiche</string>
   <string name="daylight_header_pack_title">Pacchetto immagini intestazione</string>
   <string name="status_bar_custom_header_shadow_title">Ombra immagine intestazione</string>
   <string name="status_bar_custom_header_shadow_summary">Per una migliore visibilità su immagini luminose</string>
@@ -223,10 +234,16 @@
   <string name="custom_header_provider_title">Provider dell\'intestazione</string>
   <string name="custom_header_browse_title">Sfoglia le intestazioni installate</string>
   <string name="custom_header_browse_summary">Tieni premuto su un\'immagine per usarla nella modalità statica</string>
+  <string name="custom_header_browse_summary_new">Sfoglia tutti i pacchetti d\'intestazioni disponibili</string>
+  <string name="custom_header_pick_title">Imposta immagine d\'intestazione</string>
+  <string name="custom_header_pick_summary">Seleziona un\'immagine per usarla nella modalità statica</string>
   <string name="style_enabled_summary">Immagine intestazione personalizzata attiva</string>
   <string name="style_disabled_summary">Immagine intestazione personalizzata non attiva</string>
+  <string name="header_provider_disabled">Disabilitato</string>
+  <string name="custom_header_title">Immagine intestazione personalizzata</string>
   <!-- Network traffic -->
   <string name="network_traffic_title">Traffico di rete</string>
+  <string name="network_traffic_summary">Traffico di rete nella barra di stato</string>
   <string name="show_network_traffic_state">Monitor traffico nella barra di stato</string>
   <string name="show_network_traffic_unit">Unità di visualizzazione</string>
   <string name="show_network_traffic_frequency">Intervallo aggiornamento</string>
@@ -243,6 +260,7 @@
   <string name="network_traffic_autohide_title">Nascondi automaticamente</string>
   <string name="network_traffic_autohide_summary">Nasconde il monitor di traffico quando non c\'è nessuna attività</string>
   <string name="network_traffic_autohide_threshold">Soglia inattività</string>
+  <string name="network_traffic_enable_title">Abilita</string>
   <!-- statusbar brightness -->
   <string name="status_bar_brightness_control_title">Controllo luminosità</string>
   <string name="status_bar_brightness_control_summary">Regola la luminosità scorrendo il dito sulla barra di stato</string>
@@ -284,19 +302,19 @@
   <string name="global_actions_lockdown_title">Blocca</string>
   <string name="global_actions_settings_title">Impostazioni</string>
   <string name="global_actions_airplane_title">Modalità aereo</string>
-  <string name="global_actions_screenshot_title">Screenshot</string>
+  <string name="global_actions_screenshot_title">Immagine del display</string>
   <string name="global_actions_screenrecord_title">Registra schermo</string>
   <string name="global_actions_torch_title">Torcia</string>
   <string name="global_actions_users_title">Utenti</string>
   <string name="global_actions_voiceassist_title">Assistente vocale</string>
   <string name="global_actions_silent_title">Modalità silenziosa</string>
   <string name="global_actions_dnd_title">Non disturbare</string>
-  <string name="global_actions_title">Menu alimentazione</string>
   <string name="global_actions_summary">Azioni visualizzate nel menu alimentazione</string>
   <string name="global_actions_header">Alcune azioni sono visibili solo a seconda dell\'impostazione o solo se il dispositivo è sbloccato</string>
   <string name="global_actions_anim">Aspetto</string>
   <string name="global_actions_advanced_reboot_summary">Mostra più opzioni nel menu di riavvio</string>
   <string name="global_actions_advanced_reboot_title">Abilita riavvio avanzato</string>
+  <string name="global_actions_advanced_reboot_summary_new">Mostra più opzioni nel menu di riavvio se non bloccato</string>
   <string name="font_sample_text">11:57</string>
   <string name="screenshot_crop_and_share_title">Ritaglia &amp; condividi screenshot</string>
   <string name="screenshot_crop_and_share_summary">Visualizza una finestra di modifica dopo aver catturato uno screenshot per fare alcune operazioni come ritaglio, salvataggio o condivisione di esso</string>
@@ -306,6 +324,8 @@
   <string name="lockscreen_qs_summary">Disattiva scorciatoie e impostazioni rapide nella schermata di blocco con password</string>
   <string name="lockscreen_qs_disabled_summary">L\'accesso ai quick settings nella schermata di blocco è attivato</string>
   <string name="lockscreen_qs_enabled_summary">L\'accesso ai quick settings nella schermata di blocco è disattivato</string>
+  <string name="lockscreen_power_menu_disabled_title">Disabilita menu di spegnimento quando bloccato</string>
+  <string name="lockscreen_power_menu_disabled_summary">Disabilita menu di spegnimento nella schermata di blocco sicura</string>
   <string name="status_bar_quick_qs_pulldown_title">Menù a discesa rapido</string>
   <string name="status_bar_quick_qs_pulldown_summary">Il bordo a %1$s della barra di stato mostra le impostazioni rapide</string>
   <string name="status_bar_quick_qs_pulldown_summary_left">Sinistra</string>
@@ -366,7 +386,7 @@
   <string name="device_hostname">Nome host del dispositivo</string>
   <!-- OMS -->
   <string name="theming_title">Tema</string>
-  <string name="oms_app_title">Substratum theme engine</string>
+  <string name="oms_app_title">Substratum motore tema</string>
   <string name="oms_app_summary">Inizia l\'esperienza di Substratum</string>
   <string name="status_bar_ime_notification_title">Visualizza notifica di IME</string>
   <string name="status_bar_ime_notification_summary">Se la barra di navigazione non è disponibile</string>
@@ -436,7 +456,6 @@
   <string name="headset_plugged_notification_summary">Visualizza notifica quando si connette cuffie con jack audio</string>
   <!-- Display : Rotation -->
   <string name="category_display">Display</string>
-  <string name="display_rotation_title">Rotazione</string>
   <string name="display_rotation_disabled">Disabilitato</string>
   <string name="display_rotation_unit">gradi</string>
   <string name="display_rotation_category_title">Modalità di rotazione</string>
@@ -489,6 +508,7 @@
   <string name="DESC_LIGHT_IDLE_MAINTENANCE_MAX_BUDGET">Questo è l\'importo massimo di tempo che vogliamo rendere disponibile per la modalità di manutenzione in idle leggero</string>
   <string name="DESC_MIN_LIGHT_MAINTENANCE_TIME">Questa è la quantità minima di tempo che rimarremo in modalità di manutenzione dopo una modalità doze leggera</string>
   <string name="DESC_MIN_DEEP_MAINTENANCE_TIME">Questa è la quantità minima di tempo che rimarremo in modalità di manutenzione dopo una modalità doze completa</string>
+  <string name="DESC_KEY_NOTIFICATION_WHITELIST_DURATION">Quantità di tempo che un\'app che gestisce una notifica resterà nella whitelist</string>
   <string name="SHORT_INACTIVE_TIMEOUT">Timeout inattivo</string>
   <string name="SHORT_SENSING_TIMEOUT">Timeout di rilevamento</string>
   <string name="SHORT_LOCATING_TIMEOUT">Timeout posizione corrente</string>
@@ -514,4 +534,25 @@
   <string name="SHORT_LIGHT_IDLE_MAINTENANCE_MAX_BUDGET">Modalità manutenzione leggera timeout max</string>
   <string name="SHORT_MIN_LIGHT_MAINTENANCE_TIME">Modalità manutenzione doze leggera timeout min</string>
   <string name="SHORT_MIN_DEEP_MAINTENANCE_TIME">Modalità manutenzione doze completa timeout min</string>
+  <string name="SHORT_KEY_NOTIFICATION_WHITELIST_DURATION">Durata massima della notifica nella whitelist</string>
+  <string name="logcat_app_title">MatLog</string>
+  <string name="logcat_app_summary">Avvia l\'app per raccogliere i registri</string>
+  <string name="omni_theme_title">Tema Omni chiaro/scuro</string>
+  <string name="omni_theme_summary">Tema basato su Substratum</string>
+  <string name="show_dashboard_columns_title">Usa un layout a colonne</string>
+  <string name="show_dashboard_columns_summary">Nella pagina principale delle impostazioni</string>
+  <string name="hide_dashboard_summary_title">Nascondi sommario</string>
+  <string name="hide_dashboard_summary_summary">Nella pagina principale delle impostazioni</string>
+  <string name="systemui_theme_style_title">Stile SystemUI</string>
+  <string name="systemui_theme_style_auto">In base allo sfondo</string>
+  <string name="systemui_theme_style_light">Stile chiaro</string>
+  <string name="systemui_theme_style_dark">Stile scuro</string>
+  <string name="volume_steps_title">Livelli volume</string>
+  <string name="volume_steps_summary">Configura i livelli di volume per i differenti audio</string>
+  <string name="volume_steps_30">30 livelli</string>
+  <string name="volume_steps_15">15 livelli</string>
+  <string name="volume_steps_7">7 livelli</string>
+  <string name="volume_steps_5">5 livelli</string>
+  <string name="system_volume_option_title">Volume sistema</string>
+  <string name="call_volume_option_title">Volume chiamate</string>
 </resources>

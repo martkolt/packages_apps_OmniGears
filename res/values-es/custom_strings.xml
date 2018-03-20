@@ -18,7 +18,6 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="more_settings_title">OmniGears más...</string>
   <string name="ok">OK</string>
   <string name="advanced">Avanzado</string>
   <string name="profiles_add">Agregar...</string>
@@ -57,6 +56,7 @@
   <string name="keys_action_normal">Pulsación normal</string>
   <string name="keys_action_long">Pulsación larga</string>
   <string name="keys_action_double">Doble toque</string>
+  <string name="keys_action_all_apps">Todas las aplicaciones</string>
   <string name="dialog_no_home_key_title">Sin acción en la tecla home</string>
   <string name="no_home_key">¡No hay asignada una acción al botón de \"Inicio\"! ¡Esto puede hacer que el dispositivo quede inservible!</string>
   <string name="button_volume_keys_title">Volumen</string>
@@ -140,11 +140,16 @@
   <string name="batterylight_title">Ajustes del LED de batería</string>
   <string name="battery_light_enable">Habilitar</string>
   <string name="battery_low_pulse_title">Parpadear con batería baja</string>
+  <string name="battery_light_only_full_charge_title">Iluminar sólo cuando esté completamente cargado</string>
   <string name="battery_light_list_title">Colores</string>
   <string name="battery_light_low_color_title">Batería baja</string>
   <string name="battery_light_medium_color_title">Cargando</string>
   <string name="battery_light_full_color_title">Cargado (90%)</string>
   <string name="battery_light_really_full_color_title">Cargado (100%)</string>
+  <string name="fast_color_cat_title">Carga Rápida</string>
+  <string name="fast_charging_led_enabled_title">Habilitar color de carga rápida</string>
+  <string name="fast_charging_led_enabled_summary">Usa distinto color en carga rápida hasta superar el 90% de carga</string>
+  <string name="fast_charging_light_color_title">Color</string>
   <string name="edit_battery_settings">Editar la configuración de la batería</string>
   <string name="led_color_green">Verde</string>
   <string name="led_color_red">Rojo</string>
@@ -154,9 +159,6 @@
   <string name="statusbar_battery_summary">Definir estilo del indicador de batería de la barra de estado</string>
   <string name="battery_style_title">Estilo</string>
   <string name="battery_percent_title">Mostrar porcentaje</string>
-  <string name="battery_percent_none">Nunca</string>
-  <string name="battery_percent_always">Siempre</string>
-  <string name="battery_percent_expanded">Expandido</string>
   <string name="statusbar_percent_inside_title">Porcentaje dentro del icono</string>
   <string name="statusbar_percent_inside_summary">Mostrar el porcentaje por encima del icono de batería</string>
   <string name="statusbar_charging_image_title">Indicador de carga</string>
@@ -166,12 +168,16 @@
   <string name="statusbar_battery_charging_color_enable_title">Colorear mientras se está cargando</string>
   <string name="battery_enable_title">Mostrar batería</string>
   <string name="button_backlight_title">Luz de fondo de botones</string>
+  <string name="button_backlight_summary">Configurar brillo y habilitación</string>
+  <string name="button_backlight_on_touch_only_title">Botón táctil</string>
+  <string name="button_backlight_on_touch_only_summary">Activar retroiluminación con tiempo sólo en botón</string>
   <string name="button_timeout_title">Tiempo de espera de retroiluminación</string>
   <string name="button_timeout_summary">Deshabilitado en el valor 0</string>
   <string name="button_link_brightness">Enlazar a la pantalla</string>
   <string name="button_link_brightness_summary">Utilice el nivel de brillo de la pantalla</string>
   <string name="button_manual_brightness">Nivel de brillo</string>
   <string name="unit_sec">seg</string>
+  <string name="unit_msec">ms</string>
   <string name="button_backlight_enable_title">Habilitar</string>
   <string name="navigation_bar_show_title">Mostrar barra de navegación</string>
   <string name="navigation_bar_show_summary">Forzar la barra de navegación</string>
@@ -183,6 +189,12 @@
   <string name="omniswitch_dialog_running_new">OmniSwitch actualmente no está habilitado. Por favor habilitalo en la configuración de la aplicación.</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch no esta instalado.</string>
   <string name="omniswitch_title">Estilo de recientes</string>
+  <string name="long_press_recents_action_title">Acción de toque largo en botón de recientes</string>
+  <string name="long_press_recents_action_split">Activar pantalla dividida</string>
+  <string name="long_press_home_action_title">Pulsación larga del botón de Inicio</string>
+  <string name="double_press_home_action_title">Acción de doble toque</string>
+  <string name="keys_action_recents">Recientes</string>
+  <string name="keys_action_assist">Iniciar asistente</string>
   <string name="doze_brightness_level_title">Nivel de brillo</string>
   <!-- Lock screen config -->
   <string name="lockscreen_shortcut_title">Atajos</string>
@@ -210,9 +222,9 @@
   <string name="lockscreen_camera_shortcut_enable_summary">La visibilidad depende de la configuración del sistema</string>
   <string name="lockscreen_left_shortcut_enable_title">Mostrar atajo del marcador o del asistente de voz</string>
   <string name="lockscreen_left_shortcut_enable_summary">La visibilidad depende de la configuración del sistema</string>
+  <string name="lockscreen_category_title">Pantalla de bloqueo</string>
   <string name="notification_title">Panel de notificación</string>
   <string name="status_bar_custom_header_title">Imagen de encabezado personalizada</string>
-  <string name="status_bar_custom_header_summary">Habilitar imagen en el panel de notificaciones</string>
   <string name="daylight_header_pack_title">Paquete de imágenes de encabezado</string>
   <string name="status_bar_custom_header_shadow_title">Sombra de la imagen de cabecera</string>
   <string name="status_bar_custom_header_shadow_summary">Para una mejor visibilidad en imágenes brillantes</string>
@@ -222,10 +234,16 @@
   <string name="custom_header_provider_title">Proveedor del encabezado</string>
   <string name="custom_header_browse_title">Buscar encabezados instalados</string>
   <string name="custom_header_browse_summary">Pulsación larga sobre cualquier imagen para modo estático</string>
+  <string name="custom_header_browse_summary_new">Ver todos los paquetes disponibles del encabezado</string>
+  <string name="custom_header_pick_title">Imagen de encabezado personalizada</string>
+  <string name="custom_header_pick_summary">Pulsación larga sobre cualquier imagen para modo estático</string>
   <string name="style_enabled_summary">Imagen de encabezado personalizada esta activada</string>
   <string name="style_disabled_summary">Imagen de encabezado personalizada esta desactivada</string>
+  <string name="header_provider_disabled">Deshabilitado</string>
+  <string name="custom_header_title">Imagen de encabezado personalizada</string>
   <!-- Network traffic -->
   <string name="network_traffic_title">Tráfico de red</string>
+  <string name="network_traffic_summary">Monitor de tráfico de red en la barra de estado</string>
   <string name="show_network_traffic_state">Monitor de tráfico de red en la barra de estado</string>
   <string name="show_network_traffic_unit">Mostrar unidad</string>
   <string name="show_network_traffic_frequency">Intervalo de actualización</string>
@@ -242,6 +260,7 @@
   <string name="network_traffic_autohide_title">Ocultar automáticamente</string>
   <string name="network_traffic_autohide_summary">Ocultar el monitor de tráfico de red cuando no hay actividad</string>
   <string name="network_traffic_autohide_threshold">Umbral de inactividad</string>
+  <string name="network_traffic_enable_title">Habilitar</string>
   <!-- statusbar brightness -->
   <string name="status_bar_brightness_control_title">Control de brillo</string>
   <string name="status_bar_brightness_control_summary">Ajustar el brillo deslizando a través de la barra de estado</string>
@@ -290,12 +309,12 @@
   <string name="global_actions_voiceassist_title">Asistente de voz</string>
   <string name="global_actions_silent_title">Modo silencio</string>
   <string name="global_actions_dnd_title">No molestar</string>
-  <string name="global_actions_title">Menu de apagado</string>
   <string name="global_actions_summary">Acciones del menú de apagado</string>
   <string name="global_actions_header">Algunas acciones son solamente visibles dependiendo de la configuración o solamente si el dispositivo está desbloqueado</string>
   <string name="global_actions_anim">Apariencia</string>
   <string name="global_actions_advanced_reboot_summary">Mostrar más opciones en el menú de reinicio</string>
   <string name="global_actions_advanced_reboot_title">Habilitar reinicio avanzado</string>
+  <string name="global_actions_advanced_reboot_summary_new">Mostrar más opciones en el menú de reinicio</string>
   <string name="font_sample_text">11:57</string>
   <string name="screenshot_crop_and_share_title">Recortar y compartir capturas de pantalla</string>
   <string name="screenshot_crop_and_share_summary">Mostrar un editor después de tomar una captura de pantalla con el fin de hacer algunas operaciones como recortar, guardar o compartir</string>
@@ -305,6 +324,8 @@
   <string name="lockscreen_qs_summary">Deshabilitar accesos directos y ampliar la configuración rápida en la pantalla de bloqueo segura</string>
   <string name="lockscreen_qs_disabled_summary">Acceso rápido a la configuración en pantalla de bloqueo está ACTIVADO</string>
   <string name="lockscreen_qs_enabled_summary">Acceso rápido a la configuración en pantalla de bloqueo está DESACTIVADO</string>
+  <string name="lockscreen_power_menu_disabled_title">Desactivar menú de apagado cuando esté bloqueado</string>
+  <string name="lockscreen_power_menu_disabled_summary">Desactivar menú de encendido en la pantalla de bloqueo seguro</string>
   <string name="status_bar_quick_qs_pulldown_title">Despliegue rápido</string>
   <string name="status_bar_quick_qs_pulldown_summary">El borde %1$s de la barra de estado bajará los Ajustes Rápidos</string>
   <string name="status_bar_quick_qs_pulldown_summary_left">Izquierda</string>
@@ -435,7 +456,6 @@
   <string name="headset_plugged_notification_summary">Mostrar notificación al conectar los auriculares por cable</string>
   <!-- Display : Rotation -->
   <string name="category_display">Visualizar</string>
-  <string name="display_rotation_title">Rotación</string>
   <string name="display_rotation_disabled">Deshabilitada</string>
   <string name="display_rotation_unit">grados</string>
   <string name="display_rotation_category_title">Modos de rotación</string>
@@ -448,5 +468,28 @@
   <string name="volume_button_force_media_summary">El volumen de los medios se cambiará por defecto</string>
   <string name="lockscreen_hide_status_bar_title">Ocultar la barra de estado</string>
   <string name="lockscreen_hide_status_bar_summary">Toca la barra de estado para cambiar la visibilidad</string>
+  <string name="status_bar_logo_title">Logo de la barra de estado</string>
+  <string name="status_bar_logo_summary">Un poco de swag</string>
   <!-- Doze settings editor -->
+  <string name="doze_settings_title">Ajustes Doze</string>
+  <string name="doze_settings_summary">Editar la configuración de ajustes de Doze</string>
+  <string name="action_save">Guardar</string>
+  <string name="action_restoredefault">Restaurar valores predeterminados</string>
+  <string name="action_profile">Perfiles</string>
+  <string name="action_save_as_profile">Guardar como perfil</string>
+  <string name="delete_profile">Borrar perfil</string>
+  <string name="profile_name">Nombre</string>
+  <string name="string_seconds">segundos</string>
+  <string name="string_default">Por defecto</string>
+  <string name="action_filter">Filtro</string>
+  <string name="doze_settings_applied">Configuración aplicada</string>
+  <string name="DESC_LIGHT_MAX_IDLE_TIMEOUT">Este es el tiempo máximo que ejecutaremos el mantenimiento en modo inactivo</string>
+  <string name="SHORT_INACTIVE_TIMEOUT">Tiempo de espera inactivo</string>
+  <string name="omni_theme_title">Tema claro/oscuro</string>
+  <string name="show_dashboard_columns_title">Diseño de dos columnas</string>
+  <string name="hide_dashboard_summary_title">Ocultar Resumen</string>
+  <string name="systemui_theme_style_dark">Estilo oscuro</string>
+  <string name="volume_steps_30">30 pasos</string>
+  <string name="volume_steps_15">15 pasos</string>
+  <string name="volume_steps_7">7 pasos</string>
 </resources>

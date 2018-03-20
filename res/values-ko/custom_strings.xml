@@ -150,9 +150,6 @@
   <string name="statusbar_battery_summary">상태 표시줄의 배터리 스타일 설정</string>
   <string name="battery_style_title">스타일</string>
   <string name="battery_percent_title">% 표시</string>
-  <string name="battery_percent_none">사용 안 함</string>
-  <string name="battery_percent_always">항상</string>
-  <string name="battery_percent_expanded">확장됨</string>
   <string name="statusbar_percent_inside_title">% 오버레이</string>
   <string name="statusbar_percent_inside_summary">배터리 이미지 위에 %를 보입니다.</string>
   <string name="statusbar_charging_image_title">충전 표시</string>
@@ -205,7 +202,6 @@
   <string name="lockscreen_left_shortcut_enable_summary">표시는 시스템 설정에 따라 다릅니다.</string>
   <string name="notification_title">알림 패널</string>
   <string name="status_bar_custom_header_title">사용자 정의 헤더 이미지</string>
-  <string name="status_bar_custom_header_summary">알림 패널의 헤더 이미지 활성화</string>
   <string name="daylight_header_pack_title">헤더 이미지 팩</string>
   <string name="status_bar_custom_header_shadow_title">헤더 이미지 그림자</string>
   <string name="status_bar_custom_header_shadow_summary">밝은 이미지에 더 나은 가시성을 위해...</string>
@@ -275,7 +271,6 @@
   <string name="global_actions_voiceassist_title">음성 지원</string>
   <string name="global_actions_silent_title">무음 모드</string>
   <string name="global_actions_dnd_title">방해 금지</string>
-  <string name="global_actions_title">전원 메뉴</string>
   <string name="global_actions_summary">전원 메뉴의 작업을 보여줍니다.</string>
   <string name="global_actions_header">일부 작업은 설정 중이거나 장치의 잠금이 풀렸을 때만 보여집니다.</string>
   <string name="font_sample_text">11:57</string>

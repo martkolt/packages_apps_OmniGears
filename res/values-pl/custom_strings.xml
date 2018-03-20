@@ -18,7 +18,6 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="more_settings_title">Zaawansowane ustawienia OmniGears</string>
   <string name="ok">OK</string>
   <string name="advanced">Zaawansowane</string>
   <string name="profiles_add">Dodaj...</string>
@@ -154,9 +153,6 @@
   <string name="statusbar_battery_summary">Wybierz styl ikony baterii</string>
   <string name="battery_style_title">Styl</string>
   <string name="battery_percent_title">Pokaż procent</string>
-  <string name="battery_percent_none">Nigdy</string>
-  <string name="battery_percent_always">Zawsze</string>
-  <string name="battery_percent_expanded">Rozwinięty</string>
   <string name="statusbar_percent_inside_title">Wygląd procentowy</string>
   <string name="statusbar_percent_inside_summary">Wyświetlaj procentowy stan baterii na ikonie</string>
   <string name="statusbar_charging_image_title">Wskaźnik ładowania</string>
@@ -210,7 +206,6 @@
   <string name="lockscreen_left_shortcut_enable_summary">Dostępność zależy od konfiguracji systemu</string>
   <string name="notification_title">Panel powiadomień</string>
   <string name="status_bar_custom_header_title">Niestandardowe tło panelu powiadomień</string>
-  <string name="status_bar_custom_header_summary">Włącz tło panelu powiadomień</string>
   <string name="daylight_header_pack_title">Paczka teł ekranu powiadomień</string>
   <string name="status_bar_custom_header_shadow_title">Cień obrazu nagłówka</string>
   <string name="status_bar_custom_header_shadow_summary">Dla lepszej widoczności na jasnych obrazach</string>
@@ -287,7 +282,6 @@
   <string name="global_actions_voiceassist_title">Asystent głosowy</string>
   <string name="global_actions_silent_title">Tryb cichy</string>
   <string name="global_actions_dnd_title">Nie przeszkadzać</string>
-  <string name="global_actions_title">Menu zasilania</string>
   <string name="global_actions_summary">Akcje wyświetlane w menu zasilania</string>
   <string name="global_actions_header">Niektóre akcje są widoczne w zależności od konfiguracji lub tylko wtedy, gdy urządzenie jest odblokowane</string>
   <string name="global_actions_anim">Wygląd</string>

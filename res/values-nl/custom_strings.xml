@@ -18,7 +18,6 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="more_settings_title">OmniGears Meer...</string>
   <string name="ok">OK</string>
   <string name="advanced">Uitgebreid</string>
   <string name="profiles_add">Voeg toe...</string>
@@ -155,9 +154,6 @@
   <string name="statusbar_battery_summary">Stijl voor weergave van de batterij instellen</string>
   <string name="battery_style_title">Stijl</string>
   <string name="battery_percent_title">Percentage weergeven</string>
-  <string name="battery_percent_none">Nooit</string>
-  <string name="battery_percent_always">Altijd</string>
-  <string name="battery_percent_expanded">Uitgebreid</string>
   <string name="statusbar_percent_inside_title">Percentage overlay</string>
   <string name="statusbar_percent_inside_summary">Percentage weergeven bovenop de accu afbeelding</string>
   <string name="statusbar_charging_image_title">Laad indicator</string>
@@ -213,7 +209,6 @@
   <string name="lockscreen_left_shortcut_enable_summary">Zichtbaarheid hangt af van systeeminstellingen</string>
   <string name="notification_title">Notificatie paneel</string>
   <string name="status_bar_custom_header_title">Aangepaste header afbeelding</string>
-  <string name="status_bar_custom_header_summary">Schakel header afbeelding in het notificatiepaneel in</string>
   <string name="daylight_header_pack_title">Header afbeelding collectie</string>
   <string name="status_bar_custom_header_shadow_title">Header image schaduw</string>
   <string name="status_bar_custom_header_shadow_summary">Voor betere zichtbaarheid op heldere beelden</string>
@@ -292,7 +287,6 @@ Schakel het tonen van het weer in het notificatiepaneel in</string>
   <string name="global_actions_voiceassist_title">Voiceassist</string>
   <string name="global_actions_silent_title">Stille modus</string>
   <string name="global_actions_dnd_title">Niet storen</string>
-  <string name="global_actions_title">Afsluit-menu</string>
   <string name="global_actions_summary">Acties weergeven in het afsluit-menu</string>
   <string name="global_actions_header">Sommige acties zijn weergeven afhankelijk van de instellingen of alleen als het apparaat is ontgrendeld</string>
   <string name="global_actions_anim">Uiterlijk</string>

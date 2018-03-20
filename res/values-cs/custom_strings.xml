@@ -18,7 +18,6 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="more_settings_title">Více o OmniGears...</string>
   <string name="ok">OK</string>
   <string name="advanced">Rozšířené</string>
   <string name="profiles_add">Přidat...</string>
@@ -57,6 +56,7 @@
   <string name="keys_action_normal">Normální stisk</string>
   <string name="keys_action_long">Dlouhý stisk</string>
   <string name="keys_action_double">Dvojitý stisk</string>
+  <string name="keys_action_all_apps">Všechny aplikace</string>
   <string name="dialog_no_home_key_title">Žádná akce tlačítka Domů</string>
   <string name="no_home_key">Nemáte přiřazeny žádné akce na tlačítko \"Domů\"!  To může způsobit, že přístroj bude nepoužitelný!</string>
   <string name="button_volume_keys_title">Hlasitost</string>
@@ -146,6 +146,10 @@
   <string name="battery_light_medium_color_title">Nabíjení</string>
   <string name="battery_light_full_color_title">Nabito (90%)</string>
   <string name="battery_light_really_full_color_title">Nabito (100%)</string>
+  <string name="fast_color_cat_title">Rychlé nabíjení</string>
+  <string name="fast_charging_led_enabled_title">Povolit barvu rychlého nabíjení</string>
+  <string name="fast_charging_led_enabled_summary">Při rychlém nabíjení použít jinou barvu až do nabití na 90%</string>
+  <string name="fast_charging_light_color_title">Barva</string>
   <string name="edit_battery_settings">Upravit nastavení baterie</string>
   <string name="led_color_green">Zelená</string>
   <string name="led_color_red">Červená</string>
@@ -155,9 +159,6 @@
   <string name="statusbar_battery_summary">Nastavit styl stavové lišty baterie</string>
   <string name="battery_style_title">Vzhled</string>
   <string name="battery_percent_title">Zobrazit procenta</string>
-  <string name="battery_percent_none">Nikdy</string>
-  <string name="battery_percent_always">Vždy</string>
-  <string name="battery_percent_expanded">Rozšířené</string>
   <string name="statusbar_percent_inside_title">Zobrazení procent</string>
   <string name="statusbar_percent_inside_summary">Zobrazit procenta nahoře nad indikátorem baterie</string>
   <string name="statusbar_charging_image_title">Indikátor nabíjení</string>
@@ -167,6 +168,7 @@
   <string name="statusbar_battery_charging_color_enable_title">Barva při nabíjení</string>
   <string name="battery_enable_title">Zobrazit baterii</string>
   <string name="button_backlight_title">Tlačítko podsvícení</string>
+  <string name="button_backlight_summary">Nastavení aktivace a jasu</string>
   <string name="button_backlight_on_touch_only_title">Dotyk tlačítka</string>
   <string name="button_backlight_on_touch_only_summary">Zapnout podsvícení s časovým omezením pouze po stisknutí tlačítka</string>
   <string name="button_timeout_title">Prodleva vypnutí podsvětlení</string>
@@ -175,6 +177,7 @@
   <string name="button_link_brightness_summary">Použít úroveň jasu displeje</string>
   <string name="button_manual_brightness">Úroveň jasu</string>
   <string name="unit_sec">sek</string>
+  <string name="unit_msec">ms</string>
   <string name="button_backlight_enable_title">Zapnout</string>
   <string name="navigation_bar_show_title">Zobrazit navigační panel</string>
   <string name="navigation_bar_show_summary">Rychlé zapnutí navigačního panelu</string>
@@ -186,6 +189,12 @@
   <string name="omniswitch_dialog_running_new">OmniSwitch není v současnosti povolena. Prosím, povolte v nastavení aplikace.</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch není nainstalována.</string>
   <string name="omniswitch_title">Styl nedávných</string>
+  <string name="long_press_recents_action_title">Akce při dlouhém stisku tlačítka Nedávné</string>
+  <string name="long_press_recents_action_split">Přepnout rozdělení obrazovky</string>
+  <string name="long_press_home_action_title">Dlouhý stisk tlačítka Domů</string>
+  <string name="double_press_home_action_title">Akce dvojím poklepáním</string>
+  <string name="keys_action_recents">Nedávné</string>
+  <string name="keys_action_assist">Spustit asistenta</string>
   <string name="doze_brightness_level_title">Úroveň jasu</string>
   <!-- Lock screen config -->
   <string name="lockscreen_shortcut_title">Zástupci</string>
@@ -213,9 +222,9 @@
   <string name="lockscreen_camera_shortcut_enable_summary">Viditelnost závisí na nastavení systému</string>
   <string name="lockscreen_left_shortcut_enable_title">Zobrazit zástupce vytáčení nebo hlasového asistenta</string>
   <string name="lockscreen_left_shortcut_enable_summary">Viditelnost závisí na nastavení systému</string>
+  <string name="lockscreen_category_title">Zamykací obrazovka</string>
   <string name="notification_title">Panel upozornění</string>
   <string name="status_bar_custom_header_title">Vlastní obrázek záhlaví</string>
-  <string name="status_bar_custom_header_summary">Povolit obrázek na pozadí panelu upozornění</string>
   <string name="daylight_header_pack_title">Balíček pozadí stavové lišty</string>
   <string name="status_bar_custom_header_shadow_title">Stínování obrázku záhlaví</string>
   <string name="status_bar_custom_header_shadow_summary">Pro lepší viditelnost na jasných snímcích</string>
@@ -225,10 +234,16 @@
   <string name="custom_header_provider_title">Poskytovatel v záhlaví</string>
   <string name="custom_header_browse_title">Procházet nainstalované záhlaví</string>
   <string name="custom_header_browse_summary">Dlouhým stiskem na jakémkoli obrázku jej použijte pro statický režim</string>
+  <string name="custom_header_browse_summary_new">Procházet všechny dostupné balíky záhlaví</string>
+  <string name="custom_header_pick_title">Vybrat obrázek záhlaví</string>
+  <string name="custom_header_pick_summary">Vyberte obrázek, který chcete použít pro statický režim</string>
   <string name="style_enabled_summary">Vlastní obrázek záhlaví je povolen</string>
   <string name="style_disabled_summary">Vlastní obrázek záhlaví je zakázán</string>
+  <string name="header_provider_disabled">Zakázáno</string>
+  <string name="custom_header_title">Vlastní obrázek záhlaví</string>
   <!-- Network traffic -->
   <string name="network_traffic_title">Síťový provoz</string>
+  <string name="network_traffic_summary">Zobrazení síťového provozu na stavové liště</string>
   <string name="show_network_traffic_state">Stavový řádek sledování provozu</string>
   <string name="show_network_traffic_unit">Zobrazit jednotky</string>
   <string name="show_network_traffic_frequency">Interval aktualizace</string>
@@ -245,6 +260,7 @@
   <string name="network_traffic_autohide_title">Automaticky skrývat</string>
   <string name="network_traffic_autohide_summary">Skrytí nástroje sledování provozu, pokud neprobíhá žádná aktivita</string>
   <string name="network_traffic_autohide_threshold">Práh nečinnosti</string>
+  <string name="network_traffic_enable_title">Povolit</string>
   <!-- statusbar brightness -->
   <string name="status_bar_brightness_control_title">Ovládání jasu</string>
   <string name="status_bar_brightness_control_summary">Nastavit jas posouváním po stavovém řádku</string>
@@ -293,12 +309,12 @@
   <string name="global_actions_voiceassist_title">Hlasová asistence</string>
   <string name="global_actions_silent_title">Tichý režim</string>
   <string name="global_actions_dnd_title">Nerušit</string>
-  <string name="global_actions_title">Nabídka tlačítka Vypnout</string>
   <string name="global_actions_summary">Akce v nabídce tlačítka Vypnout</string>
   <string name="global_actions_header">Některé akce jsou viditelné v závislosti na nastavení nebo pouze v případě, že zařízení je odemčené</string>
   <string name="global_actions_anim">Vzhled</string>
   <string name="global_actions_advanced_reboot_summary">Zobrazit další možnosti v nabídce restartu</string>
   <string name="global_actions_advanced_reboot_title">Povolit rozšířené restartování</string>
+  <string name="global_actions_advanced_reboot_summary_new">Zobrazit další možnosti v nabídce restartu není-li zamknuto</string>
   <string name="font_sample_text">11:57</string>
   <string name="screenshot_crop_and_share_title">Oříznout snímek displeje &amp; sdílet</string>
   <string name="screenshot_crop_and_share_summary">Zobrazit okno editoru po sejmutí displeje, s cílem provést některé operace jako je oříznutí, ukládání nebo sdílení</string>
@@ -443,7 +459,6 @@
   <string name="headset_plugged_notification_summary">Zobrazit upozornění, pokud je připojen drátový headset</string>
   <!-- Display : Rotation -->
   <string name="category_display">Obrazovka</string>
-  <string name="display_rotation_title">Rotace</string>
   <string name="display_rotation_disabled">Zakázáno</string>
   <string name="display_rotation_unit">stupně</string>
   <string name="display_rotation_category_title">Režimy rotace</string>
@@ -471,4 +486,76 @@
   <string name="string_default">Výchozí</string>
   <string name="action_filter">Filtr</string>
   <string name="doze_settings_applied">Nastavení použito</string>
+  <string name="DESC_INACTIVE_TIMEOUT">Když se zařízení stane neaktivním, po uplynutí tohoto času začneme kontrolovat snímač pohybu, abychom zjistili, zda zařízení zůstalo v klidu. Nemůžeme to udělat ihned poté, co se stane neaktivním, protože nechceme nepřetržitě kontrolovat důležitý snímač pohybu, když je obrazovka vypnutá</string>
+  <string name="DESC_SENSING_TIMEOUT">Pokud nedostaneme zpětné volání z AnyMotion v této lhůtě + locating_to, změníme STATE_SENSING na STATE_INACTIVE a libovolné zpětné volání AnyMotion, které nejsou ve STATE_SENSING, budou ignorovány</string>
+  <string name="DESC_LOCATING_TIMEOUT">Určuje, jak dlouho se bude čekat, dokud se pokusí dosáhnout dobré fixace polohy předtím, než přejde do režimu nečinnosti</string>
+  <string name="DESC_LOCATION_ACCURACY">Požadovanou maximální přesnost polohy (v metrech) považujeme za dostatečně dobrou na to, abychom přešli do pohotovostního režimu. Budeme se snažit získat alespoň takto dobrý fix polohy, dokud limit nevyprší</string>
+  <string name="DESC_MOTION_INACTIVE_TIMEOUT">Časový interval po zaregistrování pohybu, který budeme čekat předtím, než začneme opět zjišťovat pohyb</string>
+  <string name="DESC_IDLE_AFTER_INACTIVE_TIMEOUT">Toto je čas po uplynutí neaktivního časového limitu, kdy budeme čekat na hledání výrazného pohybu, dokud nebudeme považovat zařízení za skutečně nečinné</string>
+  <string name="DESC_IDLE_PENDING_TIMEOUT">Toto je počáteční čas po nečinnosti, což nám umožňuje vrátit se do stavu IDLE_PENDING, který umožní, aby systém pracoval normálně, dokud se nevrátíme do pohotovostního režimu</string>
+  <string name="DESC_MAX_IDLE_PENDING_TIMEOUT">Maximální čas nevyužitého volného času (čas spuštění), který lze použít</string>
+  <string name="DESC_IDLE_PENDING_FACTOR">Faktor změny měřítka, který se vztahuje na aktuální časový limit nečinnosti, když cyklus přejde do daného stavu</string>
+  <string name="DESC_IDLE_TIMEOUT">Počáteční čas, dokud se nedostaneme do pohotovostního režimu předtím, než se znovu probudíme, abychom se vrátili do čekající nečinnosti a umožnily běžnou práci</string>
+  <string name="DESC_MAX_IDLE_TIMEOUT">Maximální trvání nečinnosti, kterou budeme moci používat</string>
+  <string name="DESC_IDLE_FACTOR">Faktor změny měřítka, který se vztahuje na aktuální časový limit nečinnosti, když cyklus přejde do daného stavu</string>
+  <string name="DESC_MIN_TIME_TO_ALARM">Toto je minimální čas, dokud neumožníme, aby se naše další nadcházející probuzení skutečně přepnulo do pohotovostního režimu</string>
+  <string name="DESC_MAX_TEMP_APP_WHITELIST_DURATION">Maximální doba trvání, během které bude aplikace dočasně aktivována, když dostane důležitá upozornění</string>
+  <string name="DESC_MMS_TEMP_APP_WHITELIST_DURATION">Čas, který chcete povolit aplikaci, která přijímá MMS</string>
+  <string name="DESC_SMS_TEMP_APP_WHITELIST_DURATION">Čas, který chcete povolit aplikaci, která přijímá SMS</string>
+  <string name="DESC_LIGHT_IDLE_AFTER_INACTIVE_TIMEOUT">Toto je čas nečinnosti, po kterém vstoupíme do prvního jednoduchého pohotovostního režimu</string>
+  <string name="DESC_LIGHT_PRE_IDLE_TIMEOUT">To je čas, po který čekáme, odkdy jsme se rozhodli přejít do pohotovostního režimu, dokud to skutečně neprovedeme, zatímco čekáme na pracovní postupy a další aktuální aktivity na dokončení</string>
+  <string name="DESC_LIGHT_IDLE_TIMEOUT">Toto je počáteční čas spuštění v pohotovostním režimu</string>
+  <string name="DESC_LIGHT_IDLE_FACTOR">Faktor změny měřítka, který se používá pro jednoduchý režim nečinnosti při každém dokončení cyklu</string>
+  <string name="DESC_LIGHT_MAX_IDLE_TIMEOUT">Toto je maximální čas spuštění v režimu nečinnosti</string>
+  <string name="DESC_LIGHT_IDLE_MAINTENANCE_MIN_BUDGET">Toto je minimální čas, který chcete zpřístupnit pro režim údržby v režimu slabé nečinnosti</string>
+  <string name="DESC_LIGHT_IDLE_MAINTENANCE_MAX_BUDGET">Toto je maximální čas, který chcete zpřístupnit pro režim údržby v režimu slabé nečinnosti</string>
+  <string name="DESC_MIN_LIGHT_MAINTENANCE_TIME">Toto je minimální čas, po který zůstaneme v režimu údržby po lehkém spánku</string>
+  <string name="DESC_MIN_DEEP_MAINTENANCE_TIME">Toto je minimální čas, po který zůstaneme v režimu údržby po plném spánku</string>
+  <string name="DESC_KEY_NOTIFICATION_WHITELIST_DURATION">Čas, který chcete povolit aplikaci, která zpracování oznámení</string>
+  <string name="SHORT_INACTIVE_TIMEOUT">Časový limit nečinnosti</string>
+  <string name="SHORT_SENSING_TIMEOUT">Časový limit snímání</string>
+  <string name="SHORT_LOCATING_TIMEOUT">Časový limit vyhledávání polohy</string>
+  <string name="SHORT_LOCATION_ACCURACY">Přesnost umístění</string>
+  <string name="SHORT_MOTION_INACTIVE_TIMEOUT">Časový limit snímačů pohybu</string>
+  <string name="SHORT_IDLE_AFTER_INACTIVE_TIMEOUT">Nečinnost po časovém limitu neaktivity</string>
+  <string name="SHORT_IDLE_PENDING_TIMEOUT">Časový limit přestávky</string>
+  <string name="SHORT_MAX_IDLE_PENDING_TIMEOUT">Maximální časový limit přestávky</string>
+  <string name="SHORT_IDLE_PENDING_FACTOR">Faktor limitu přestávky</string>
+  <string name="SHORT_IDLE_TIMEOUT">Časový limit nečinnosti</string>
+  <string name="SHORT_MAX_IDLE_TIMEOUT">Maximální časový limit nečinnosti</string>
+  <string name="SHORT_IDLE_FACTOR">Faktor nečinnosti</string>
+  <string name="SHORT_MIN_TIME_TO_ALARM">Minimální doba alarmu</string>
+  <string name="SHORT_MAX_TEMP_APP_WHITELIST_DURATION">Maximální doba trvání aplikací na seznamu povolených položek</string>
+  <string name="SHORT_MMS_TEMP_APP_WHITELIST_DURATION">Maximální doba trvání MMS na seznamu povolených položek</string>
+  <string name="SHORT_SMS_TEMP_APP_WHITELIST_DURATION">Maximální doba trvání SMS na seznamu povolených položek</string>
+  <string name="SHORT_LIGHT_IDLE_AFTER_INACTIVE_TIMEOUT">Lehká nečinnost po časovém limitu neaktivity</string>
+  <string name="SHORT_LIGHT_PRE_IDLE_TIMEOUT">Doba trvání před lehkou nečinností</string>
+  <string name="SHORT_LIGHT_IDLE_TIMEOUT">Doba trvání lehké nečinnosti</string>
+  <string name="SHORT_LIGHT_IDLE_FACTOR">Faktor lehké nečinnosti</string>
+  <string name="SHORT_LIGHT_MAX_IDLE_TIMEOUT">Maximální doba trvání lehké nečinnosti</string>
+  <string name="SHORT_LIGHT_IDLE_MAINTENANCE_MIN_BUDGET">Min. trvání volného času jednoduchého režimu údržby</string>
+  <string name="SHORT_LIGHT_IDLE_MAINTENANCE_MAX_BUDGET">Max. trvání volného času jednoduchého režimu údržby</string>
+  <string name="SHORT_MIN_LIGHT_MAINTENANCE_TIME">Minimální časový limit pro režim údržby během lehkého spánku</string>
+  <string name="SHORT_MIN_DEEP_MAINTENANCE_TIME">Minimální časový limit pro režim údržby během plného spánku</string>
+  <string name="SHORT_KEY_NOTIFICATION_WHITELIST_DURATION">Maximální doba oznámení na seznamu povolených položek</string>
+  <string name="logcat_app_title">MatLog</string>
+  <string name="logcat_app_summary">Spusťte aplikaci a shromažďujte protokoly</string>
+  <string name="omni_theme_title">Světlý/tmavý motiv Omni</string>
+  <string name="omni_theme_summary">Motivy založené na Substratum</string>
+  <string name="show_dashboard_columns_title">Použít rozložení sloupců</string>
+  <string name="show_dashboard_columns_summary">V nastavení hlavní nabídky</string>
+  <string name="hide_dashboard_summary_title">Skrýt přehled</string>
+  <string name="hide_dashboard_summary_summary">V nastavení hlavní nabídky</string>
+  <string name="systemui_theme_style_title">Styl SystemUI</string>
+  <string name="systemui_theme_style_auto">Podle tapety</string>
+  <string name="systemui_theme_style_light">Světlý styl</string>
+  <string name="systemui_theme_style_dark">Tmavý styl</string>
+  <string name="volume_steps_title">Kroky hlasitosti</string>
+  <string name="volume_steps_summary">Nastavení dostupných kroků pro různé zvukové vstupy</string>
+  <string name="volume_steps_30">30 kroků</string>
+  <string name="volume_steps_15">15 kroků</string>
+  <string name="volume_steps_7">7 kroků</string>
+  <string name="volume_steps_5">5 kroků</string>
+  <string name="system_volume_option_title">Systémová hlasitost</string>
+  <string name="call_volume_option_title">Hlasitost hlasových hovorů</string>
 </resources>

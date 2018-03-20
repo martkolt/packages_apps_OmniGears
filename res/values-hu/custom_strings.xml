@@ -18,7 +18,6 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="more_settings_title">OmniGears egyebek...</string>
   <string name="ok">OK</string>
   <string name="advanced">Haladó</string>
   <string name="profiles_add">Hozzáadás...</string>
@@ -57,6 +56,7 @@
   <string name="keys_action_normal">Normál érintés</string>
   <string name="keys_action_long">Hosszan nyomva</string>
   <string name="keys_action_double">Dupla érintés</string>
+  <string name="keys_action_all_apps">Összes alkalmazás</string>
   <string name="dialog_no_home_key_title">Nincs kezdőlap funkció</string>
   <string name="no_home_key">Nem rendelt gombot a \"Kezdőlap\" funkcióhoz. Az eszköze instabillá válhat!</string>
   <string name="button_volume_keys_title">Hangerő</string>
@@ -146,6 +146,10 @@
   <string name="battery_light_medium_color_title">Töltés</string>
   <string name="battery_light_full_color_title">Feltöltve (90%)</string>
   <string name="battery_light_really_full_color_title">Feltöltve (100%)</string>
+  <string name="fast_color_cat_title">Gyors töltés</string>
+  <string name="fast_charging_led_enabled_title">Engedélyezze a gyors töltési színt</string>
+  <string name="fast_charging_led_enabled_summary">Gyors töltés közben eltérő szín használata a 90% eléréséig</string>
+  <string name="fast_charging_light_color_title">Szín</string>
   <string name="edit_battery_settings">Akkumulátor-beállítások szerkesztése</string>
   <string name="led_color_green">Zöld</string>
   <string name="led_color_red">Vörös</string>
@@ -155,9 +159,6 @@
   <string name="statusbar_battery_summary">Állapotsor akkumulátor kijelzés stílusának beállítása</string>
   <string name="battery_style_title">Stílus</string>
   <string name="battery_percent_title">Százalék megjelenítése</string>
-  <string name="battery_percent_none">Soha</string>
-  <string name="battery_percent_always">Mindig</string>
-  <string name="battery_percent_expanded">Kiterjesztett</string>
   <string name="statusbar_percent_inside_title">Százalék megjelenítése</string>
   <string name="statusbar_percent_inside_summary">Százalék az akkumulátor képen jelenjen meg</string>
   <string name="statusbar_charging_image_title">Töltésjelző</string>
@@ -167,6 +168,7 @@
   <string name="statusbar_battery_charging_color_enable_title">Színek töltés közben</string>
   <string name="battery_enable_title">Akkumulátor megjelenítése</string>
   <string name="button_backlight_title">Gomb háttérvilágítás</string>
+  <string name="button_backlight_summary">Engedélyezés és fényerő beállítása</string>
   <string name="button_backlight_on_touch_only_title">Gomb érintése</string>
   <string name="button_backlight_on_touch_only_summary">Csak a gomb megérintése esetén engedélyezze a háttérvilágítást</string>
   <string name="button_timeout_title">Háttérvilágítás időkorlátja</string>
@@ -175,6 +177,7 @@
   <string name="button_link_brightness_summary">Használja a képernyő fényerő szintjét</string>
   <string name="button_manual_brightness">Fényerő szintek</string>
   <string name="unit_sec">mp</string>
+  <string name="unit_msec">ms</string>
   <string name="button_backlight_enable_title">Engedélyezés</string>
   <string name="navigation_bar_show_title">Navigációs sáv megjelenítése</string>
   <string name="navigation_bar_show_summary">Navigációs sáv engedélyezésének kényszerítése</string>
@@ -186,6 +189,12 @@
   <string name="omniswitch_dialog_running_new">OmniSwitch jelenleg nem engedélyezett. Kérjük, engedélyezze az alkalmazás beállításaiban.</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch nincs telepítve.</string>
   <string name="omniswitch_title">Előzmények stílusa</string>
+  <string name="long_press_recents_action_title">Előzmények hosszan nyomási művelete</string>
+  <string name="long_press_recents_action_split">Váltás osztott képernyőre</string>
+  <string name="long_press_home_action_title">Kezdőlap hosszan nyomási művelete</string>
+  <string name="double_press_home_action_title">Kezdőlap dupla érintési művelet</string>
+  <string name="keys_action_recents">Előzmények</string>
+  <string name="keys_action_assist">Segéd indítása</string>
   <string name="doze_brightness_level_title">Fényerő szintek</string>
   <!-- Lock screen config -->
   <string name="lockscreen_shortcut_title">Parancsikonok</string>
@@ -213,9 +222,9 @@
   <string name="lockscreen_camera_shortcut_enable_summary">Láthatóság a rendszerbeállításoktól függ</string>
   <string name="lockscreen_left_shortcut_enable_title">Tárcsázó, vagy hangsegéd parancsikon megjelenítése</string>
   <string name="lockscreen_left_shortcut_enable_summary">Láthatóság a rendszerbeállításoktól függ</string>
+  <string name="lockscreen_category_title">Zárképernyő</string>
   <string name="notification_title">Értesítési panel</string>
   <string name="status_bar_custom_header_title">Egyéni fejléc kép</string>
-  <string name="status_bar_custom_header_summary">Értesítési panel fejléc kép engedélyezése</string>
   <string name="daylight_header_pack_title">Fejléc képcsomag</string>
   <string name="status_bar_custom_header_shadow_title">Fejléc kép árnyék</string>
   <string name="status_bar_custom_header_shadow_summary">Jobb láthatóság világos képek esetén</string>
@@ -225,10 +234,16 @@
   <string name="custom_header_provider_title">Fejléc-szolgáltató</string>
   <string name="custom_header_browse_title">Telepített fejlécek böngészése</string>
   <string name="custom_header_browse_summary">Bármely képen hosszan nyomva a statikus üzemmódban használhatja</string>
+  <string name="custom_header_browse_summary_new">Összes elérhető fejléc csomag keresése</string>
+  <string name="custom_header_pick_title">Fejléckép kiválasztása</string>
+  <string name="custom_header_pick_summary">Válasszon ki egy képet a statikus üzemmódhoz</string>
   <string name="style_enabled_summary">Egyéni fejléc kép bekapcsolva</string>
   <string name="style_disabled_summary">Egyéni fejléc kép kikapcsolva</string>
+  <string name="header_provider_disabled">Kikapcsolva</string>
+  <string name="custom_header_title">Egyéni fejléc kép</string>
   <!-- Network traffic -->
   <string name="network_traffic_title">Hálózati forgalom</string>
+  <string name="network_traffic_summary">Állapotsori hálózati forgalom</string>
   <string name="show_network_traffic_state">Állapotsori hálózati forgalom</string>
   <string name="show_network_traffic_unit">Kijelzett egység</string>
   <string name="show_network_traffic_frequency">Frissítés gyakorisága</string>
@@ -245,6 +260,7 @@
   <string name="network_traffic_autohide_title">Automatikus elrejtés</string>
   <string name="network_traffic_autohide_summary">A forgalomfigyelő elrejtése inaktivitás esetén</string>
   <string name="network_traffic_autohide_threshold">Tétlenségi küszöb</string>
+  <string name="network_traffic_enable_title">Engedélyezés</string>
   <!-- statusbar brightness -->
   <string name="status_bar_brightness_control_title">Fényerő beállítása</string>
   <string name="status_bar_brightness_control_summary">Fényerő beállítása az állapotsoron való csúsztatással</string>
@@ -293,12 +309,12 @@
   <string name="global_actions_voiceassist_title">Hangsegéd</string>
   <string name="global_actions_silent_title">Néma üzemmód</string>
   <string name="global_actions_dnd_title">Ne zavarjanak</string>
-  <string name="global_actions_title">Kikapcsoló menü</string>
   <string name="global_actions_summary">Kikapcsoló menüben látható műveletek</string>
   <string name="global_actions_header">Egyes tevékenységek csak a beállításai függvényében láthatóak, vagy csak akkor, ha a készülék fel van oldva</string>
   <string name="global_actions_anim">Megjelenés</string>
   <string name="global_actions_advanced_reboot_summary">További lehetőségek megjelenítése az újraindítási menüben</string>
   <string name="global_actions_advanced_reboot_title">Speciális újraindítás engedélyezése</string>
+  <string name="global_actions_advanced_reboot_summary_new">További lehetőségek megjelenítése az újraindítás menüben, ha nincs zárolva</string>
   <string name="font_sample_text">11:57</string>
   <string name="screenshot_crop_and_share_title">Képernyőmentés vágása és megosztása</string>
   <string name="screenshot_crop_and_share_summary">Képernyőmentés után szerkesztő ablak megjelenítése annak érdekében, hogy bizonyos műveleteket, mint a vágás, mentés és megosztás megtehessen</string>
@@ -443,7 +459,6 @@
   <string name="headset_plugged_notification_summary">Értesítés megjelenítése vezetékes fejhallgató csatlakoztatásakor</string>
   <!-- Display : Rotation -->
   <string name="category_display">Kijelző</string>
-  <string name="display_rotation_title">Elforgatás</string>
   <string name="display_rotation_disabled">Kikapcsolva</string>
   <string name="display_rotation_unit">fok</string>
   <string name="display_rotation_category_title">Forgatás módok</string>
@@ -523,4 +538,24 @@
   <string name="SHORT_MIN_LIGHT_MAINTENANCE_TIME">Karbantartási üzemmód könnyű doze min időkorlát</string>
   <string name="SHORT_MIN_DEEP_MAINTENANCE_TIME">Karbantartási üzemmód teljes doze min időkorlát</string>
   <string name="SHORT_KEY_NOTIFICATION_WHITELIST_DURATION">Max értesítés engedélyezési időtartam</string>
+  <string name="logcat_app_title">MatLog</string>
+  <string name="logcat_app_summary">Indítsa el az alkalmazást a naplózáshoz</string>
+  <string name="omni_theme_title">Omni Világos/Sötét téma</string>
+  <string name="omni_theme_summary">Substratum alapú téma</string>
+  <string name="show_dashboard_columns_title">Oszlopos elrendezés használata</string>
+  <string name="show_dashboard_columns_summary">A beállítások főoldalon</string>
+  <string name="hide_dashboard_summary_title">Összefoglaló elrejtése</string>
+  <string name="hide_dashboard_summary_summary">A beállítások főoldalon</string>
+  <string name="systemui_theme_style_title">SystemUI stílusa</string>
+  <string name="systemui_theme_style_auto">Háttérkép alapján</string>
+  <string name="systemui_theme_style_light">Világos stílus</string>
+  <string name="systemui_theme_style_dark">Sötét stílus</string>
+  <string name="volume_steps_title">Hangerő léptetések</string>
+  <string name="volume_steps_summary">Különböző hangtípusok elérhető lépéseinek beállítása</string>
+  <string name="volume_steps_30">30 lépés</string>
+  <string name="volume_steps_15">15 lépés</string>
+  <string name="volume_steps_7">7 lépés</string>
+  <string name="volume_steps_5">5 lépés</string>
+  <string name="system_volume_option_title">Rendszerhangok hangereje</string>
+  <string name="call_volume_option_title">Telefonhívás hangereje</string>
 </resources>

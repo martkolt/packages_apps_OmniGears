@@ -18,7 +18,6 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="more_settings_title">OmniGears Детальніше...</string>
   <string name="ok">OK</string>
   <string name="advanced">Розширені налаштування</string>
   <string name="profiles_add">Додати...</string>
@@ -46,6 +45,7 @@
   <string name="keys_app_switch_long_press_title">Кнопка \"Перемикання додатків\" (довге натискання)</string>
   <string name="keys_action_nothing">Жодної дії</string>
   <string name="keys_action_menu">Відкрити/Закрити меню</string>
+  <string name="keys_action_app_switch">Панель недавніх по замовчуванні</string>
   <string name="keys_action_search">Помічник пошуку</string>
   <string name="keys_action_voice_search">Голосовий пошук</string>
   <string name="keys_action_in_app_search">Пошук в додатку</string>
@@ -56,19 +56,34 @@
   <string name="keys_action_normal">Нормальне натискання</string>
   <string name="keys_action_long">Довге натискання</string>
   <string name="keys_action_double">Подвійне натискання</string>
+  <string name="keys_action_all_apps">Всі додатки</string>
   <string name="dialog_no_home_key_title">Відсутня дія для кнопки \"Додому\"</string>
   <string name="no_home_key">Ви не призначили дію для кнопки \"Додому\"! Це може зробити пристрій непридатним для використання!</string>
   <string name="button_volume_keys_title">Гучність</string>
   <string name="button_volume_wake_title">Пробудження кнопками гучності</string>
   <string name="button_volume_wake_summary">Натискання на кнопки гучності пробуджує пристрій</string>
+  <string name="button_volume_wake_enabled_summary">Пробудженн якнопками гучності включено</string>
+  <string name="button_volume_wake_disabled_summary">Пробудження кнопками гучності виключено</string>
   <string name="volume_button_music_control_title">Керування музикою</string>
+  <string name="volume_button_music_control_summary">Довге натиснення кнопки гучності переключає музичний трек коли екран виключено</string>
   <string name="keys_action_sleep">Вимкнути екран</string>
   <string name="keys_action_omniswitch">Панель останніх додатків Omni</string>
   <string name="button_home_wake_title">Пробудження кнопками гучності</string>
   <string name="button_home_wake_summary">Натиснення кнопки \"Додому\" розбудить ваш пристрій</string>
   <string name="button_home_answers_call_title">Кнопка відповіді на дзвінок</string>
   <string name="button_home_answers_call_summary">Натискання кнопки \"Додому\" приймає вхідний дзвінок</string>
+  <string name="button_other_title">Інші</string>
+  <string name="keys_action_app_switch_card">По замовчуванню</string>
+  <string name="keys_action_app_switch_grid">По замовчуванню</string>
+  <string name="button_back_kill_enable_title">Кнопка \"Назад \"закриє додаток</string>
+  <string name="button_back_kill_enable_summary">Закриття даного додатку зажиманням кнопки Назад</string>
+  <string name="button_back_kill_timeout_title">Тайм-фут закриття додатків</string>
+  <string name="button_back_kill_timeout_500ms">500 мс</string>
+  <string name="button_back_kill_timeout_1000ms">1000 мс</string>
+  <string name="button_back_kill_timeout_1500ms">1500 мс</string>
   <!-- Double tap to sleep -->
+  <string name="double_tap_to_sleep_title">Двійне нажаття для виключення</string>
+  <string name="double_tap_to_sleep_summary">Двійний натиск по строці стану виключає екран</string>
   <!-- Doze pulse (ambient display) options -->
   <string name="doze_overwrite_value_title">Перезаписати значення</string>
   <string name="doze_overwrite_value_summary">Дозволяє перезаписувати значення за замовчуванням з конфігурації користувачів</string>
@@ -121,35 +136,48 @@
   <string name="swap_volume_buttons_summary">Відрегулювати дії кнопок гучності в залежності від поточного положення</string>
   <string name="color_picker_dialog_title">Колір</string>
   <!-- Battery light settings  -->
+  <string name="batterylight_title">Індикація батареї</string>
   <string name="battery_light_enable">Увімкнути</string>
   <string name="battery_low_pulse_title">Індикація розрядки батареї</string>
+  <string name="battery_light_only_full_charge_title">Загоряється тілько при повній зарядці</string>
   <string name="battery_light_list_title">Кольори</string>
   <string name="battery_light_low_color_title">Низький заряд батареї</string>
   <string name="battery_light_medium_color_title">Зарядка</string>
   <string name="battery_light_full_color_title">Заряджено (90%)</string>
   <string name="battery_light_really_full_color_title">Заряджено (100%)</string>
+  <string name="fast_color_cat_title">Швидка зарядка</string>
+  <string name="fast_charging_led_enabled_title">Включити колір швидкої зарядки</string>
+  <string name="fast_charging_led_enabled_summary">Використовувати інший колір до 90% при швидкій зарядці</string>
+  <string name="fast_charging_light_color_title">Колір</string>
   <string name="edit_battery_settings">Редагувати параметри батареї</string>
   <string name="led_color_green">Зелений</string>
   <string name="led_color_red">Червоний</string>
   <string name="led_color_blue">Синій</string>
   <string name="statusbar_title">Статус бар</string>
   <string name="battery_title">Показувати батарею</string>
+  <string name="statusbar_battery_summary">Задать стиль аккумулятора в строці стану</string>
   <string name="battery_style_title">Стиль</string>
   <string name="battery_percent_title">Відображати відсотки</string>
-  <string name="battery_percent_none">Ніколи</string>
-  <string name="battery_percent_always">Завжди</string>
-  <string name="battery_percent_expanded">Широкий</string>
   <string name="statusbar_percent_inside_title">Відсоток накладання</string>
   <string name="statusbar_percent_inside_summary">Відображення відсотків на верхівці зображення акумулятора</string>
   <string name="statusbar_charging_image_title">Індикатор зарядки</string>
   <string name="statusbar_category_charging_title">Зарядка</string>
   <string name="statusbar_charging_image_summary">Показати значок блискавки під час зарядки. Приховує відсотки над акумулятором</string>
+  <string name="statusbar_battery_charging_color_title">Колір</string>
+  <string name="statusbar_battery_charging_color_enable_title">Колір під час зарядки</string>
+  <string name="battery_enable_title">Показати батарею</string>
+  <string name="button_backlight_title">Підсвітка кнопок</string>
+  <string name="button_backlight_summary">Налаштування включення і яскравості</string>
+  <string name="button_backlight_on_touch_only_title">Підсвітка при нажаті по кнопках</string>
+  <string name="button_backlight_on_touch_only_summary">Включати підсвітку кнопок з тайм-аутом тілько при нажаті на них</string>
   <string name="button_timeout_title">Тайм-аут підсвічування</string>
   <string name="button_timeout_summary">Вимикається при нульовому значенні</string>
   <string name="button_link_brightness">У відповідності з екраном</string>
   <string name="button_link_brightness_summary">Використовувати яскравість екрану</string>
   <string name="button_manual_brightness">Рівень яскравості</string>
   <string name="unit_sec">сек</string>
+  <string name="unit_msec">мсек</string>
+  <string name="button_backlight_enable_title">Включити</string>
   <string name="navigation_bar_show_title">Показати панель навігації</string>
   <string name="navigation_bar_show_summary">Примусове увімкнення панелі навігації</string>
   <string name="hardware_keys_disable_title">Вимкнути клавіші</string>
@@ -157,12 +185,27 @@
   <string name="navbar_title">Навігаційна панель</string>
   <string name="navbar_recents_style_title">Стиль списку запущених додатків</string>
   <string name="omniswitch_settings">Налаштування</string>
+  <string name="omniswitch_dialog_running_new">На даний момент OmniSwitch не включений. Будь-ласка включіть його в настройках додатку.</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch не встановлено.</string>
+  <string name="omniswitch_title">Стиль списку запущенних додатків</string>
+  <string name="long_press_recents_action_title">Дія при довгому натиску на нещодавні</string>
+  <string name="long_press_recents_action_split">Переключити розділення екрану</string>
+  <string name="long_press_home_action_title">Довге натиснення кнопки Додому</string>
+  <string name="keys_action_recents">Недавні</string>
+  <string name="keys_action_assist">Допомога запуску</string>
   <string name="doze_brightness_level_title">Рівень яскравості</string>
   <!-- Lock screen config -->
+  <string name="lockscreen_shortcut_title">Ярлики</string>
+  <string name="lockscreen_voice_shortcut_title">Ярлик голосового помічника</string>
+  <string name="lockscreen_shortcuts_enable_title">Включити</string>
+  <string name="lockscreen_clock_display_time_title">Відображати час</string>
+  <string name="lockscreen_clock_display_date_title">Відображати дату</string>
+  <string name="lockscreen_clock_display_alarm_title">Відображати наступниц будильник</string>
+  <string name="lockscreen_clock">Годинник</string>
+  <string name="lockscreen_clock_font_title">Шрифт часу</string>
+  <string name="lockscreen_clock_color_title">Колір дати і годинника</string>
   <string name="notification_title">Панель сповіщень</string>
   <string name="status_bar_custom_header_title">Користувацький заголовок зображення</string>
-  <string name="status_bar_custom_header_summary">Увімкнути заголовок зображення панелі сповіщень</string>
   <!-- Network traffic -->
   <string name="network_traffic_title">Мережевий трафік</string>
   <string name="show_network_traffic_state">Відображати трафік у статус барі</string>
@@ -189,19 +232,51 @@
   <string name="status_bar_network_activity_summary">Відобразити індикатори в статус барі</string>
   <!-- Navigationbar settings -->
   <!-- Enable Tablet Style navigation bar -->
+  <string name="enable_tablet_navigation_title">Використовувати планшетний інтерфейс</string>
+  <string name="enable_tablet_navigation_summary">Планшетний інтерфейс відображує кнопки \"Назад\" и \"Додому\" слева, а \"Огляд\" - справа</string>
+  <string name="other_category">Інші</string>
   <!-- Dashboard columns -->
+  <string name="dashboard_columns_title">Стовбці налаштувань</string>
+  <string name="dashboard_columns_phone_default">По замовчуванні</string>
+  <string name="dashboard_columns_two">2</string>
+  <string name="dashboard_columns_tablet_default">По замовчуванні</string>
+  <string name="dashboard_columns_three">3</string>
+  <string name="dashboard_columns_four">4</string>
+  <string name="dashboard_colums_resize_title">В залежності від орієнтації екрану</string>
   <!-- global acions config -->
   <!--<string name="screenshot_crop_behavior_title"></string>
     <string name="screenshot_crop_behavior_summary"></string>-->
   <!-- Power menu Animations  -->
+  <string name="power_menu_animation_enter">Omni (по стандарту)</string>
   <!-- Notification light dialogs -->
   <!-- Values for the notification light pulse spinners -->
+  <string name="pulse_length_normal">Стандартно</string>
+  <string name="pulse_length_long">Довго</string>
+  <string name="pulse_length_very_long">Дуже довго</string>
+  <string name="pulse_speed_very_fast">Дуже швидко</string>
+  <string name="pulse_speed_fast">Швидко</string>
+  <string name="pulse_speed_normal">Стандартно</string>
+  <string name="pulse_speed_slow">Довго</string>
+  <string name="pulse_speed_very_slow">Дуже довго</string>
   <!-- Lights settings screen, notification light settings -->
+  <string name="omni_battery_light_settings">Індикація батареї</string>
+  <string name="omni_notification_light_settings">Індикація додатків</string>
+  <string name="omni_leds">Світодіод</string>
+  <string name="omni_lights_title">Індикатор подій</string>
+  <string name="notification_light_title">Індикатор повідомлень</string>
+  <string name="notificationlight_title">Налайштування індикатора сповіщеннь</string>
   <string name="notification_light_general_title">Загальні</string>
+  <string name="notification_light_applist_title">Додатки</string>
+  <string name="notification_light_use_custom">Використовувати власне значення</string>
   <!-- Lights settings, LED notification -->
   <!-- Hostname setting -->
   <!-- OMS -->
   <!-- Summaries -->
+  <string name="night_mode_summary">%s</string>
+  <string name="night_mode_no">Світла</string>
+  <string name="night_mode_yes">Темна</string>
   <!-- Display : Rotation -->
   <!-- Doze settings editor -->
+  <string name="action_save">Зберегти</string>
+  <string name="action_profile">Профіль</string>
 </resources>
