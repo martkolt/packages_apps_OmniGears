@@ -65,5 +65,11 @@
                 android:entries="@array/screen_off_animation_entries"
                 android:entryValues="@array/screen_off_animation_values"
                 android:persistent="false"/>
+
+            <org.omnirom.omnigears.preference.GlobalSettingSwitchPreference
+                android:key="system_default_animation"
+                android:title="@string/system_default_animation_title"
+                android:summary="@string/system_default_animation_summary"
+                android:defaultValue="false" />
         </PreferenceCategory>
 </PreferenceScreen>
