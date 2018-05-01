@@ -246,7 +246,6 @@
   <string name="recents_search_bar_title">Mostrar barra de pesquisa</string>
   <string name="recents_fullscreen_title">Tela cheia</string>
   <string name="weather_title">Clima</string>
-  <string name="weather_config_title">Configurações do serviço</string>
   <string name="header_weather_title">Tempo de exibição de cabeçalho</string>
   <string name="header_weather_summary">Habilitar exibição de notificação do tempo no painel</string>
   <string name="weather_icon_pack_title">Condição pacote de ícone</string>
@@ -411,7 +410,7 @@
   <string name="DESC_LIGHT_PRE_IDLE_TIMEOUT">This is amount of time we will wait from the point where we decide we would like to go idle until we actually do, while waiting for jobs and other current activity to finish</string>
   <string name="DESC_LIGHT_IDLE_TIMEOUT">This is the initial time that we will run in idle maintenance mode</string>
   <string name="DESC_LIGHT_IDLE_FACTOR">Scaling factor to apply to the light idle mode time each time we complete a cycle</string>
-  <string name="DESC_LIGHT_MAX_IDLE_TIMEOUT">This is the maximum time we will run in idle maintenence mode</string>
+  <string name="DESC_LIGHT_MAX_IDLE_TIMEOUT">This is the maximum time we will run in idle maintenance mode</string>
   <string name="DESC_LIGHT_IDLE_MAINTENANCE_MIN_BUDGET">This is the minimum amount of time we want to make available for maintenance mode when lightly idling</string>
   <string name="DESC_LIGHT_IDLE_MAINTENANCE_MAX_BUDGET">This is the maximum amount of time we want to make available for maintenance mode when lightly idling</string>
   <string name="DESC_MIN_LIGHT_MAINTENANCE_TIME">This is the minimum amount of time that we will stay in maintenance mode after a light doze</string>
