@@ -77,6 +77,12 @@
             android:summary="@string/global_actions_summary"
             android:icon="@drawable/ic_settings_power"
             android:fragment="org.omnirom.omnigears.interfacesettings.GlobalActionsSettings" />
+
+        <org.omnirom.omnigears.preference.SystemSettingSwitchPreference
+            android:key="system_proxi_check_enabled"
+            android:title="@string/system_proxi_check_enabled_title"
+            android:summary="@string/system_proxi_check_enabled_summary"
+            android:defaultValue="false"/>
     </PreferenceCategory>
 
     <PreferenceCategory

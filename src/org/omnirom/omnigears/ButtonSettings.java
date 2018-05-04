@@ -52,6 +52,7 @@ import com.android.internal.util.omni.DeviceUtils;
 public class ButtonSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener, Indexable {
 
     private static final String CATEGORY_KEYS = "button_keys";
+    private static final String CATEGORY_POWER = "button_power";
     private static final String KEYS_SHOW_NAVBAR_KEY = "navigation_bar_show";
     private static final String KEYS_DISABLE_HW_KEY = "hardware_keys_disable";
     private static final String NAVIGATION_BAR_RECENTS_STYLE = "navbar_recents_style";
@@ -59,6 +60,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
     private static final String LONG_PRESS_HOME_ACTION = "long_press_home_action";
     private static final String DOUBLE_PRESS_HOME_ACTION = "double_press_home_action";
     private static final String BUTTON_BACK_KILL_TIMEOUT = "button_back_kill_timeout";
+    private static final String SYSTEM_PROXI_CHECK_ENABLED = "system_proxi_check_enabled";
 
     private ListPreference mNavbarRecentsStyle;
     private ListPreference mLongPressRecentsAction;
@@ -85,6 +87,8 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
                 com.android.internal.R.integer.config_deviceHardwareKeys);
         final PreferenceCategory keysCategory =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_KEYS);
+        final PreferenceCategory powerCategory =
+                (PreferenceCategory) prefScreen.findPreference(CATEGORY_POWER);
 
         if (deviceKeys == 0) {
             prefScreen.removePreference(keysCategory);
@@ -148,6 +152,12 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
         mDoublePressHomeAction.setValue(Integer.toString(doublePressHomeAction));
         mDoublePressHomeAction.setSummary(mDoublePressHomeAction.getEntry());
         mDoublePressHomeAction.setOnPreferenceChangeListener(this);
+
+        boolean supportPowerButtonProxyCheck = getResources().getBoolean(com.android.internal.R.bool.config_proxiSensorWakupCheck);
+        SwitchPreference proxyCheckPreference = (SwitchPreference) findPreference(SYSTEM_PROXI_CHECK_ENABLED);
+        if (!supportPowerButtonProxyCheck) {
+            powerCategory.removePreference(proxyCheckPreference);
+        }
     }
 
     @Override
